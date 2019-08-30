@@ -10,6 +10,7 @@ import * as ReactDOM from "react-dom";
 import React from "react";
 import ReactDOM from "react-dom";
 import Color from './utils'
+
 /*
 class Vec2
 {
@@ -80,7 +81,88 @@ class Complex extends Vec2//Alg2
 	}
 }
 */
+/*
+interface Vec2
+{
+	x : number; 
+	y : number;
 
+	add(vec2: Vec2) : void;
+	scale(scalar : number) : void;
+	quadnorm() : number;
+	mult(vec2 : Vec2) : void;
+}
+*/
+abstract class Alg2 //implements Vec2
+{
+	x : number; 
+	y : number;
+
+	constructor(x : number, y : number)
+	{
+		this.x = x;
+		this.y = y;
+	}
+
+	add(operand: Alg2)
+	{
+		this.x += operand.x;
+		this.y += operand.y;
+	}
+
+	scale(scalar : number)
+	{
+		this.x *= scalar;
+		this.y *= scalar;
+	}
+
+	abstract quadnorm() : number;
+	abstract mult(operand : Alg2) : void;
+}
+
+class Complex extends Alg2
+{
+	constructor(x : number, y : number)
+	{
+		super(x, y);
+	}
+
+	quadnorm() : number
+	{
+		return (this.x * this.x + this.y * this.y);
+	}
+
+	mult(operand : Complex) : void
+	{
+		let tmp_x = this.x * operand.x - this.y * operand.y;
+		let tmp_y = this.x * operand.y + this.y * operand.x;
+		this.x = tmp_x;
+		this.y = tmp_y;
+	}
+}
+
+class SplitComplex extends Alg2
+{
+	constructor(x : number, y : number)
+	{
+		super(x, y);
+	}
+
+	quadnorm() : number
+	{
+		return (this.x * this.x - this.y * this.y);
+	}
+
+	mult(operand : SplitComplex) : void
+	{
+		let tmp_x = this.x * operand.x + this.y * operand.y;
+		let tmp_y = this.x * operand.y + this.y * operand.x;
+		this.x = tmp_x;
+		this.y = tmp_y;
+	}
+}
+
+/*
 class Complex// extends Vec2//Alg2
 {
 	x : number; 
@@ -123,17 +205,18 @@ class Complex// extends Vec2//Alg2
 		return (Math.sqrt(this.quadnorm()));
 	}
 }
+*/
 
-
-export type DwellFunction = (max_dwell : number, complex : Complex) => number;
+export type DwellFunction = (max_dwell : number, alg2 : Alg2) => number;
 //export type Sampling2DFunction = (width : number, height : number) => number[][];
 
-function samplePointsOnPlane(width : number, height : number, span : [Complex, Complex])
+function samplePointsOnPlane(width : number, height : number, span : [Alg2, Alg2])
 {
 	let x : number;
 	let y : number;
-	let step : Complex;
-	let result : Complex[][];
+	let step : Alg2;
+	let result : Alg2[][];
+	let is_complex = (span[0] instanceof Complex);
 
 	if (span[0].x > span[1].x)
 	{
@@ -148,8 +231,16 @@ function samplePointsOnPlane(width : number, height : number, span : [Complex, C
 		span[1].y = y;
 	}
 
-	step = new Complex((span[1].x - span[0].x) / width,
-					(span[1].y - span[0].y) / height);// as Alg2;
+	if (is_complex)
+	{
+		step = new Complex((span[1].x - span[0].x) / width,
+							(span[1].y - span[0].y) / height);
+	}
+	else
+	{
+		step = new SplitComplex((span[1].x - span[0].x) / width,
+							(span[1].y - span[0].y) / height);
+	}
 	result = [];
 	for (y = 0; y < height; y++)
 	{
@@ -158,7 +249,16 @@ function samplePointsOnPlane(width : number, height : number, span : [Complex, C
 		for (x = 0; x < width; x++)
 		{
 			let x_pos = span[0].x + x * step.x;
-			pointline.push(new Complex(x_pos, y_pos));//as Alg2);
+			let new_item : Alg2;
+			if (is_complex)
+			{
+				new_item = new Complex(x_pos, y_pos);
+			}
+			else
+			{
+				new_item = new SplitComplex(x_pos, y_pos);
+			}
+			pointline.push(new_item);
 		}
 		result.push(pointline);
 	}
@@ -168,7 +268,7 @@ function samplePointsOnPlane(width : number, height : number, span : [Complex, C
 
 //function fractalRender_MarianiSilver()
 
-function fractalRender_Simple(width : number, height : number, points : Complex[][],
+function fractalRender_Simple(width : number, height : number, points : Alg2[][],
 								max_dwell : number, getDwell : DwellFunction)
 {
 	let result : number[][];
@@ -214,15 +314,20 @@ function dwellArray_to_colorArray(width : number, height : number, dwell_arr : n
 	return (result);
 }
 
-function mandelbrotDwell(max_dwell : number, start: Complex)
+function mandelbrotDwell(max_dwell : number, start: Alg2)
 {
 	let dwell = 0;
-	let z = new Complex(start.x, start.y);
+	let z : Alg2;
+
+	if (start instanceof Complex)
+		z = new Complex(start.x, start.y);
+	else
+		z = new SplitComplex(start.x, start.y);
 
 	while (Math.abs(z.quadnorm()) < 4 && dwell < max_dwell)
 	{
-		z = z.mult(z);
-		z = z.add(start);
+		z.mult(z);
+		z.add(start);
 		dwell++;
 	}
 
@@ -280,5 +385,5 @@ class Mandelbrot implements EscapeTimeFractal
 
 export {samplePointsOnPlane, fractalRender_Simple, dwellArray_to_colorArray,
 		mandelbrotDwell,
-		/*Vec2,*/ Complex};
+		Alg2, Complex, SplitComplex};
 

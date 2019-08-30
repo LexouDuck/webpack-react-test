@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {MandelbrotCanvas, Color} from './react-canvas';
-import {Complex} from './fractals'
+import {Complex, SplitComplex} from './fractals'
 
 const App: React.FC = () =>
 {
@@ -21,7 +21,7 @@ const App: React.FC = () =>
 					<br/>
 					<br/><i>SEE YOU LATER, CODE MONKEY</i>
 				</p>
-				<MandelbrotCanvas width={300} height={300} span={[new Complex(-1, -1), new Complex(1, 1)]} />
+				<MandelbrotCanvas width={1024} height={1024} span={[new SplitComplex(-2, -2), new SplitComplex(2, 2)]} />
 				<a href="https://reactjs.org"
 					className="App-link"
 					target="_blank"

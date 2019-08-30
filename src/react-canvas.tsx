@@ -40,7 +40,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {samplePointsOnPlane, fractalRender_Simple, dwellArray_to_colorArray,
         DwellFunction, mandelbrotDwell,
-        /*Vec2,*/ Complex} from './fractals';
+        Alg2, Complex, SplitComplex} from './fractals';
 import Color from './utils'
 
 
@@ -117,7 +117,7 @@ interface FractalCanvasProps
     height: number;
 //    palette: Color[];
 //    max_dwell: number;
-    span : [Complex, Complex];//[Alg2, Alg2];
+    span : [Alg2, Alg2]; //everything else flows from whether span is a Complex or a SplitComplex
 //    dwell_func : DwellFunction;
 }
 
@@ -145,7 +145,6 @@ function buildFractalCanvas(palette: Color[], max_dwell : number, dwell_func : D
             const dwell_array = fractalRender_Simple(this.props.width, this.props.height, point_array, max_dwell, dwell_func);
             const color_array = dwellArray_to_colorArray(this.props.width, this.props.height, dwell_array, palette);
 
-console.log(color_array);
             for (let y = 0; y < this.props.height; y++)
             {
                 for (let x = 0; x < this.props.width; x++)
