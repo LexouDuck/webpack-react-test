@@ -136,6 +136,7 @@ Syntax:
 
 <canvas>
 	A container for JavaScript graphics. See more at https://www.w3schools.com/graphics/canvas_intro.asp
+	https://www.html5rocks.com/en/tutorials/canvas/performance/
 
 <svg>
 	A container for Scalable Vector Graphics. See more at https://www.w3schools.com/graphics/svg_intro.asp
@@ -357,6 +358,7 @@ In a nutshell, the reason why Bootstrap and all these JS frameworks like Angular
 https://learnxinyminutes.com/docs/javascript/
 http://www.jslint.com/
 https://www.w3schools.com/jsref/default.asp
+http://www.jsperf.com/
 
 	-call: method for every function that takes an object and the function's arguments (knowing the object is used for previously unreferenced "this" in the function definition)
 	-apply: method for every function that takes an object and an array with the function's arguments (especially useful if the function runs over an array, such as a fold/reduce type function; similar use of unreference "if")
@@ -399,12 +401,23 @@ https://www.typescriptlang.org/
 https://learnxinyminutes.com/docs/typescript/
 https://www.typescriptlang.org/docs/handbook/basic-types.html
 https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html
+https://2ality.com/2018/04/type-notation-typescript.html
 
 -"interface" in TS works as a "typedef" in C (can be used either for function type renaming or object type definition)
 -classes are general OO classes, in that they allow a constructor, implementation of methods, public and private attributes and methods, static members (reminder: a static element in OO, is a "class-level" not "instance-level" property, constants should be declared with const outside the class or readonly inside the class).
 
-.ts for normal typescript, .tsx for typescript with JSX
+File extension
+	.ts for normal typescript, .tsx for typescript with JSX
 
+
+Compilation:
+	tsconfig.json is a (required) file which gives info to the TS compiler: the command "npx tsc --init" can be used to generate it. More info: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+
+	rootDir and outDir give locations for where to run the TS compiler and return output respectively. Generally, you don’t want to keep the generated javascript in your source control, so be sure to add the build folder to your .gitignore
+
+	Running:
+		npm run build
+	If you see no output, it means that it completed successfully.
 
 
 
@@ -458,7 +471,9 @@ https://github.com/facebook/react-devtools
 
 12)A) Elements
 
-Unlike browser DOM elements, React elements are plain objects, and are cheap to create. React elements are necessarily declared with const, as they are immutable. The only way to update the UI is to create a *new* element, and pass it to ReactDOM.render().
+Unlike browser DOM elements, React elements are plain objects, and are cheap to create.
+React elements are necessarily declared with const, as they are immutable.
+The only way to update the UI is to create a *new* element, and pass it to ReactDOM.render().
 
 Instantiation:
 
@@ -479,7 +494,7 @@ Instantiation:
 
 A react element is composed of:
 	-type: (ie, h1)
-	-props: attributes (classname), children (subnodes in the DOM, such as the text within a div)
+	-props: attributes (ie, className), children (subnodes in the DOM, such as the text within a div)
 
 
 To "convert" an element to HTML, use:
@@ -561,9 +576,9 @@ Adding a local state (making a component go from "stateless" to "stateful"):
 	2- Add a class constructor that assigns the initial this.state:
 	  	constructor(props) { //Class components should always call the base constructor with 'props'.
  			super(props);
- 			this.state = {attribute: new Attribute()};
+ 			this.state = {attribute: new Attribute()}; //any mutable attribute is stored here as JSON
  		}
-	3- Remove 'attribute' from the <MyClass attribute="" /> line in ReactDom.render()
+	3- Remove the state-specific 'attribute' from the <MyClass attribute="" /> line in ReactDom.render()
 
 
 To manage resources correctly, one must first "mount" (allocate) the component into the DOM the first time, and "unmount" (free) the DOM's component every time it changes. There are two methods (called "lifecycle methods") which React defines to be read at the appropriate times:
@@ -571,8 +586,9 @@ To manage resources correctly, one must first "mount" (allocate) the component i
 	componentDidMount() {	}
 	componentWillUnmount() {	}
 
-The componentDidMount() method runs after the component output has been rendered to the DOM.
-The componentWillUnmount() method... (whenever a clear/free is necessary ?)
+	-The componentDidMount() method runs after the component output has been rendered to the DOM.
+	-The componentWillUnmount() method is invoked immediately before a component is unmounted and destroyed. Perform any necessary cleanup in this method, such as invalidating timers, canceling network requests, or cleaning up any subscriptions that were created in componentDidMount().
+
 These should be used in conjunction with 'this.setState()', called by other custom methods (themselves called by cDM and cWU), to schedule updates to the component local state.
 
 NB: if you modify state directly, it will not update the DOM/re-render. One MUST use this.setState({attribute: "attrval"}).
@@ -674,7 +690,9 @@ In HTML, various form elements each have their own current state. In React we us
 There should be a single “source of truth” for any data that changes in a React application. Usually, the state is first added to the component that needs it for rendering. Then, if other components also need it, you can lift it up to their closest common ancestor. Instead of trying to sync the state between different components, you should rely on the top-down data flow.
 
 
-12)I) Composition vs Inheritance
+12)I) Composition vs Inheritance, and Higher Order Components
+
+Because React cannot truly implement OO inheritance, building a reusable frame for components boils down to using composition (where it is possible), or better yet, using Higher Order Components.
 
 TODO
 https://reactjs.org/docs/composition-vs-inheritance.html
@@ -684,6 +702,22 @@ The use case here is when you have a container (box like structure), that can co
 
 Specialization (OO Inheritance)
 In React, this is also achieved by composition, where a more “specific” component renders a more “generic” one and configures it with props.
+
+https://reactjs.org/docs/higher-order-components.html
+Concretely, a higher-order component is a function that takes a component and returns a new component.
+	const EnhancedComponent = higherOrderComponent(WrappedComponent, dataOrFunctionThatSpecializesTheComponent1, ...);
+
+	or in more detail
+
+	const higherOrderComponent = (WrappedComponent) => {
+	  class HOC extends React.Component {
+	    render() {
+	      return <WrappedComponent />;
+	    }
+	  }
+	    
+	  return HOC;
+	};
 
 
 12)J) Global Context
@@ -1116,8 +1150,10 @@ Introspection
 
 
 
-X) Setup JS/TS/React/Webpack
 
+19) Setup JS/TS/React/Webpack
+
+https://github.com/Microsoft/TypeScript-React-Starter#typescript-react-starter
 https://webpack.js.org/
 
 Mac:
@@ -1126,6 +1162,56 @@ Mac:
 	npm install webpack -g
 
 "yarn add ..." can be replaced with "npm install -S ..."
+
+Make sure that you have @types/react and @types/react-dom installed (https://definitelytyped.org/)
+
+
+19)A) Function Components
+
+These can be written as normal functions that take a props argument and return a JSX element.
+
+	type AppProps = { message: string }; /* could also use interface */
+	const App = ({ message }: AppProps) => <div>{message}</div>;
+
+Due to limitations in the compiler, function components cannot return anything other than a JSX expression or null, otherwise it complains with a cryptic error message saying that the other type is not assignable to Element.
+
+
+19)B) Components
+
+Within TypeScript, React.Component is a generic type (aka React.Component<PropType, StateType>), so you want to provide it with (optional) prop and state type parameters:
+
+	type MyProps = {
+	  // using `interface` is also ok
+	  message: string;
+	};
+	type MyState = {
+	  count: number; // like this
+	};
+	class App extends React.Component<MyProps, MyState> {
+	  state: MyState = {
+	    // optional second annotation for better type inference
+	    count: 0
+	  };
+	  render() {
+	    return (
+	      <div>
+	        {this.props.message} {this.state.count}
+	      </div>
+	    );
+	  }
+	}
+
+
+
+
+
+X) Libraries which could be useful
+
+https://konvajs.org/api/Konva.html
+https://medium.com/@lavrton/using-react-with-html5-canvas-871d07d8d753
+
+
+
 
 
 
