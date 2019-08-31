@@ -1,0 +1,1542 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"anim",
+				"anim_counter"
+			],
+			[
+				"Play",
+				"Player_alucard"
+			],
+			[
+				"ALUCARD_ALLO",
+				"ALUCARD_ALLOW_JUMP"
+			],
+			[
+				"curren",
+				"current_anim"
+			],
+			[
+				"AL",
+				"ALUCARD_STATUS_WALK"
+			],
+			[
+				"Pal",
+				"Player_alucard"
+			],
+			[
+				"P",
+				"Player_alucard"
+			],
+			[
+				"A",
+				"ALUCARD_ACTION_SWING"
+			],
+			[
+				"Player",
+				"Player_alucard"
+			],
+			[
+				"ALUC",
+				"ALUCARD_ACTION_SUBWEP"
+			],
+			[
+				"ALUCARD_STA",
+				"ALUCARD_STATUS_WOLF"
+			],
+			[
+				"Pla",
+				"Player_alucard"
+			],
+			[
+				"stat",
+				"status"
+			],
+			[
+				"SUBWEP",
+				"SUBWEP_MARIA_SUZAKU"
+			],
+			[
+				"SUBWEA",
+				"SUBWEAPON_MARIA_MAX_BYAKKO"
+			],
+			[
+				"Playe",
+				"Player"
+			],
+			[
+				"PICK",
+				"PICKUP_ITEM_USABLE"
+			],
+			[
+				"pickup",
+				"pickuptype"
+			],
+			[
+				"WHIP",
+				"WHIP_SPACING"
+			],
+			[
+				"whip",
+				"whip_coords"
+			],
+			[
+				"whip_coords",
+				"whip_coords_amount"
+			],
+			[
+				"RICH",
+				"RICHTER_ACTION_HIGHJUMP"
+			],
+			[
+				"JOYP",
+				"JOYPAD_LEFT"
+			],
+			[
+				"Pl",
+				"Player_maria"
+			],
+			[
+				"COLOR",
+				"COLORPROMPT_CONFIRM"
+			],
+			[
+				"T",
+				"Tileset_Pause"
+			],
+			[
+				"cloak_j",
+				"cloak_joseph2"
+			],
+			[
+				"cloak",
+				"cloak_joseph1"
+			],
+			[
+				"prompt",
+				"prompt_selected"
+			],
+			[
+				"PAUSE_EQU",
+				"PAUSE_EQUIP_PROMPT_REVERSECLOAK"
+			],
+			[
+				"Game",
+				"Game_HandleState_Pause_Equip"
+			],
+			[
+				"EQUIPTYPE",
+				"EQUIPTYPE_CLOAK"
+			],
+			[
+				"t_pa",
+				"t_pause_equip_prompt"
+			],
+			[
+				"notify_",
+				"notify_subtitle"
+			],
+			[
+				"noti",
+				"notify_subtitle"
+			],
+			[
+				"sel",
+				"selected_index"
+			],
+			[
+				"pick",
+				"pickup-"
+			],
+			[
+				"ITEM_AC",
+				"ITEM_ACCESSORY_AMOUNT"
+			],
+			[
+				"ITEM_HELMET_",
+				"ITEM_HELMET_AMOUNT"
+			],
+			[
+				"SUBWEAPON",
+				"SUBWEAPON_AGNEA"
+			],
+			[
+				"icon_",
+				"icon_framedata"
+			],
+			[
+				"player",
+				"Player"
+			],
+			[
+				"sprite_",
+				"sprite_anim_play"
+			],
+			[
+				"MARIA",
+				"MARIA_STATUS_CROUCH"
+			],
+			[
+				"in",
+				"invulnerable"
+			],
+			[
+				"chara",
+				"character"
+			],
+			[
+				"PLayer",
+				"Player_alucard"
+			],
+			[
+				"REND",
+				"RENDER_W_TILES"
+			],
+			[
+				"ar",
+				"area_counter"
+			],
+			[
+				"on_col",
+				"on_collide_damage"
+			],
+			[
+				"equip_s",
+				"equip_selected_index"
+			],
+			[
+				"text",
+				"textbox_w"
+			],
+			[
+				"att",
+				"attack_rect"
+			],
+			[
+				"equip_",
+				"equip_selected_equip"
+			],
+			[
+				"JOY",
+				"JOYPAD_DOWN"
+			],
+			[
+				"joyp",
+				"joypad"
+			],
+			[
+				"MAP",
+				"MAP_LAYER_MAX"
+			],
+			[
+				"ALUCARD_IDLE",
+				"ALUCARD_STATUS_IDLE"
+			],
+			[
+				"sprite",
+				"sprite_anim_play"
+			],
+			[
+				"SDL_",
+				"SDL_PointInRect"
+			],
+			[
+				"shie",
+				"shield_dash"
+			],
+			[
+				"ALUCARD",
+				"ALUCARD_ACTION_PUNCH"
+			],
+			[
+				"ALU",
+				"ALUCARD_ALLOW_BACKDASH"
+			],
+			[
+				"SP",
+				"SPRITE_FLIP_H"
+			],
+			[
+				"SHIELD_HOLD",
+				"SHIELD_HOLD_DISTANCE"
+			],
+			[
+				"S",
+				"SHIELD_ANIMTYPE_DEPLOY"
+			],
+			[
+				"SHIEL",
+				"SHIELD_ANIMTYPE_HOLD"
+			],
+			[
+				"SHIE",
+				"SHIELD_ANIMTYPE_HOLD"
+			],
+			[
+				"SHIELD",
+				"SHIELD_ANIMTYPE_DEPLOY"
+			],
+			[
+				"RICHTER_ALL",
+				"RICHTER_ALLOW_JUMPSHIV"
+			],
+			[
+				"player_c",
+				"player_alucard"
+			],
+			[
+				"pla",
+				"player"
+			],
+			[
+				"spri",
+				"sprite_rect_flip"
+			],
+			[
+				"ATTACK_HITBOX",
+				"ATTACK_HITBOX_NONE"
+			],
+			[
+				"ply",
+				"player_richter"
+			],
+			[
+				"ATTACK",
+				"ATTACK_HITBOX_NONE"
+			],
+			[
+				"current",
+				"current_frame"
+			],
+			[
+				"door",
+				"door_magic_frame"
+			],
+			[
+				"COM",
+				"COMMON_ANIM_DOOR"
+			],
+			[
+				"inc_co",
+				"inc_common_pal_maxup"
+			],
+			[
+				"inc_c",
+				"inc_common_pal_explode"
+			],
+			[
+				"COMM",
+				"COMMON_ANIM_EXPLODE_SMALL"
+			],
+			[
+				"SUB",
+				"SUBWEP_STONE"
+			],
+			[
+				"stone",
+				"stone_coords"
+			],
+			[
+				"FT_Me",
+				"FT_MemoryClear"
+			],
+			[
+				"ATTACK_hIT",
+				"ATTACK_HITBOX_KICK_DOWN"
+			],
+			[
+				"SUBWE",
+				"SUBWEAPON_AXE"
+			],
+			[
+				"sp",
+				"sprite_x"
+			],
+			[
+				"pl",
+				"player_alucard"
+			],
+			[
+				"FT",
+				"FT_MemoryCompare"
+			],
+			[
+				"FT_M",
+				"FT_MemoryAlloc"
+			],
+			[
+				"MAP_COLLI",
+				"MAP_COLLIDE_SLOPE"
+			],
+			[
+				"PPU_",
+				"PPU_Free_Stage"
+			],
+			[
+				"curr",
+				"current"
+			],
+			[
+				"PLAYER",
+				"PLAYER_CHARACTER_AMOUNT"
+			],
+			[
+				"character",
+				"character_index"
+			],
+			[
+				"MAP_ANIM",
+				"MAP_ANIMFRAMES_MAX"
+			],
+			[
+				"FT_",
+				"FT_MemoryAlloc"
+			],
+			[
+				"frame",
+				"frame_amount"
+			],
+			[
+				"MAP_H",
+				"MAP_HEADER"
+			],
+			[
+				"Action",
+				"action"
+			],
+			[
+				"shake",
+				"shake_x"
+			],
+			[
+				"sh",
+				"shake_H"
+			],
+			[
+				"height",
+				"tile_heights"
+			],
+			[
+				"collide_tiles",
+				"collide_tiles_point"
+			],
+			[
+				"coll",
+				"collide_tiles_point"
+			],
+			[
+				"col",
+				"collide_slope_R"
+			],
+			[
+				"MAP_",
+				"MAP_COLLIDE_SLOPE45_UL"
+			],
+			[
+				"room",
+				"room_x"
+			],
+			[
+				"debug_out",
+				"debug_output"
+			],
+			[
+				"debug",
+				"debug_output"
+			],
+			[
+				"WEAPO",
+				"WEAPON_ANIM_2HAND_SIMPLE"
+			],
+			[
+				"ALUCARD_STATUS_",
+				"ALUCARD_STATUS_IDLE"
+			],
+			[
+				"aluca",
+				"alucard_status"
+			],
+			[
+				"player_",
+				"player_alucard"
+			],
+			[
+				"alucard",
+				"alucard_status"
+			],
+			[
+				"Sp",
+				"SPRITE_VISIBLE"
+			],
+			[
+				"ani",
+				"anim_playing"
+			],
+			[
+				"RICHTER_ACTION_",
+				"RICHTER_ACTION_DASH"
+			],
+			[
+				"ALUCARD_ST",
+				"ALUCARD_STATUS_CROUCH"
+			],
+			[
+				"aluc",
+				"alucard_status"
+			],
+			[
+				"init_",
+				"init_item_icon"
+			],
+			[
+				"alu",
+				"alucard_action"
+			],
+			[
+				"ALUCARD_AC",
+				"ALUCARD_ACTION_SLASH"
+			],
+			[
+				"ALUCARD_S",
+				"ALUCARD_STATUS_CROUCH"
+			],
+			[
+				"margin-",
+				"margin-top\tproperty"
+			],
+			[
+				"marg",
+				"margin-left\tproperty"
+			],
+			[
+				"PR",
+				"PROPERTY_COLOR"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "WebDev_Notes",
+			"settings":
+			{
+				"buffer_size": 31465,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 706,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tsconfig.json",
+			"settings":
+			{
+				"buffer_size": 453,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 310,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/App.test.tsx",
+			"settings":
+			{
+				"buffer_size": 245,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/App.tsx",
+			"settings":
+			{
+				"buffer_size": 781,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/D/Lexou/Projects/Website/HTML/assets/main.css",
+			"settings":
+			{
+				"buffer_size": 1100,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/App.css",
+			"settings":
+			{
+				"buffer_size": 474,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/index.css",
+			"settings":
+			{
+				"buffer_size": 379,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"NES",
+				"NES Screen Tool metasprite OBJ c code cleaner"
+			],
+			[
+				"NES obj",
+				"NES Screen Tool metasprite OBJ c code cleaner"
+			],
+			[
+				"nes",
+				"NES Screen Tool metasprite OBJ c code cleaner"
+			],
+			[
+				"Nes",
+				"NES Screen Tool metasprite OBJ c code cleaner"
+			],
+			[
+				"pack ins",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"htmlif",
+				"HTMLify: non-breaking spaces"
+			],
+			[
+				"html",
+				"HTMLify: ampersands"
+			],
+			[
+				"htmlify",
+				"HTMLify: non-breaking spaces"
+			],
+			[
+				"htm",
+				"HTMLify: non-breaking spaces"
+			],
+			[
+				"pkg",
+				"Package Control: Install Package"
+			],
+			[
+				"prv",
+				"PackageResourceViewer: View Package Resource"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"scope",
+				"Scope Hunter: Toggle Instant Scoper"
+			],
+			[
+				"instant ",
+				"Scope Hunter: Toggle Instant Scoper"
+			],
+			[
+				"pkgrv",
+				"PackageResourceViewer: View Package Resource"
+			],
+			[
+				"pkc inst",
+				"Package Control: Install Package"
+			],
+			[
+				"pkgdev",
+				"PackageDev: New Color Scheme"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: re",
+				"Package Control: Remove Package"
+			],
+			[
+				"pkgctrl inst",
+				"Package Control: Install Package"
+			],
+			[
+				"packageresou",
+				"PackageResourceViewer: Edit Package Resource"
+			],
+			[
+				"package instal",
+				"Package Control: Install Package"
+			],
+			[
+				"packagedev",
+				"Package Control: Discover Packages"
+			],
+			[
+				"upp",
+				"Convert Case: Upper Case"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 492.0
+	},
+	"console":
+	{
+		"height": 118.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test",
+		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/src"
+	],
+	"file_history":
+	[
+		"/D/Lexou/Projects/Castlevania/C/src/assets.c",
+		"/D/Lexou/Projects/Castlevania/C/src/player/player_maria.c",
+		"/D/Lexou/Projects/Castlevania/C/src/player/player_richter.c",
+		"/D/Lexou/Projects/Castlevania/C/src/player/anim_player_alucard_spells.h",
+		"/D/Lexou/Projects/Castlevania/C/src/player/player_alucard.c",
+		"/D/Lexou/Projects/Castlevania/C/src/player/player.c",
+		"/D/Lexou/Projects/Castlevania/C/src/item/usable.h",
+		"/D/Lexou/Projects/Castlevania/C/src/engine/ppu_init.c",
+		"/D/Lexou/Projects/Castlevania/C/src/item/usable_weapon.c",
+		"/D/Lexou/Projects/Castlevania/C/Makefile",
+		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/tsconfig.json",
+		"/D/Lexou/Projects/Castlevania/C/tiled-castlevania.py",
+		"/D/Lexou/Projects/Castlevania/C/src/stage/stage.c",
+		"/D/Lexou/Projects/Castlevania/C/src/player/player_alucard.h",
+		"/D/Lexou/Projects/Castlevania/C/src/engine/input.h",
+		"/D/Lexou/Projects/Castlevania/C/src/assets.h",
+		"/D/Lexou/Projects/Castlevania/C/src/assets_windows.h",
+		"/D/Lexou/Projects/Castlevania/C/src/assets_linux.h",
+		"/D/Lexou/Projects/Castlevania/C/src/player/player.h",
+		"/D/Lexou/Projects/Castlevania/C/src/player/anim_player_maria.h",
+		"/D/Lexou/Projects/Castlevania/C/src/player/anim_player_richter.h",
+		"/D/Lexou/Projects/Castlevania/C/src/player/anim_player_alucard.h",
+		"/D/Lexou/Projects/Castlevania/C/src/item/usable_shield.c",
+		"/D/Lexou/Projects/Castlevania/C/src/player/player_richter.h",
+		"/D/Lexou/Projects/Castlevania/C/src/player/player_maria.h",
+		"/D/Lexou/Projects/Castlevania/C/src/item/anim_usable_shield.h",
+		"/D/Lexou/Projects/Castlevania/C/src/item/anim_usable_weapon.h",
+		"/D/Lexou/Projects/Castlevania/C/src/object/subweapon_maria.c",
+		"/D/Lexou/Projects/Castlevania/C/src/object/subweapon.h",
+		"/D/Lexou/Projects/Castlevania/C/src/engine/input.c",
+		"/D/Lexou/Projects/Castlevania/C/src/player/player_alucard_anim.h",
+		"/D/Lexou/Projects/Castlevania/C/src/engine/game.c",
+		"/D/Lexou/Projects/Castlevania/C/src/object/anim_subweapon_maria.h",
+		"/D/Lexou/Projects/Castlevania/C/src/menu/render_hud.c",
+		"/D/Lexou/Projects/Castlevania/C/src/player/player_maria_spells.h",
+		"/D/Lexou/Projects/Castlevania/C/src/item/relic.c",
+		"/D/Lexou/Projects/Castlevania/C/src/object/subweapon.c",
+		"/D/Lexou/Projects/Castlevania/C/src/engine/ppu_util.c",
+		"/D/Lexou/Projects/Castlevania/C/src/engine/ppu.c",
+		"/D/Lexou/Projects/Castlevania/C/src/engine/ppu.h",
+		"/E/filetypes.c",
+		"/D/Lexou/Projects/Castlevania/C/src/menu/pause_equip.c",
+		"/D/Lexou/Projects/Castlevania/C/src/menu/pause.h",
+		"/D/Lexou/Projects/Castlevania/C/src/player/player_richter_spells.h",
+		"/D/Lexou/Projects/Castlevania/C/src/player/player_richter_anim.h",
+		"/D/Lexou/Projects/Castlevania/C/src/player/player_maria_anim.h",
+		"/D/Lexou/Projects/Castlevania/C/src/engine/ppu_load.c",
+		"/D/Lexou/Projects/Castlevania/C/src/item/item_list.h",
+		"/D/Lexou/Projects/Castlevania/C/src/stage/map.c",
+		"/C/Users/Lexou/Downloads/atan.c",
+		"/C/Users/Lexou/AppData/Local/Temp/atan.c",
+		"/D/Lexou/Projects/Castlevania/C/src/item/item.c",
+		"/D/Lexou/Projects/Castlevania/C/src/item/relic.h",
+		"/D/Lexou/Projects/Castlevania/C/src/engine/game.h",
+		"/D/Lexou/Projects/Castlevania/C/src/engine/sprite.h",
+		"/D/Lexou/Projects/Castlevania/C/src/object/pickup.c",
+		"/D/Lexou/Projects/Castlevania/C/src/main.c",
+		"/D/Lexou/Projects/Castlevania/C/src/stage/stage.h",
+		"/D/Lexou/Projects/Castlevania/C/src/stage/map.h",
+		"/D/Lexou/Projects/Castlevania/C/src/engine/render_util.c",
+		"/D/Lexou/Projects/Castlevania/C/src/engine/render.h",
+		"/D/Lexou/Projects/Castlevania/C/src/menu/pause.c",
+		"/D/Lexou/Projects/Castlevania/C/src/menu/pause_map.c",
+		"/D/Lexou/Projects/Castlevania/C/src/menu/pause_relics.c",
+		"/D/Lexou/Projects/Castlevania/C/src/menu/pause_stats.c",
+		"/D/Lexou/Projects/Castlevania/C/src/menu/pause_spells.c",
+		"/D/Lexou/Projects/Castlevania/C/src/menu/pause_familiars.c",
+		"/D/Lexou/Projects/Castlevania/C/src/menu/pause_config.c",
+		"/D/Lexou/Projects/Castlevania/C/src/menu/pause_bestiary.c",
+		"/D/Lexou/Projects/Castlevania/C/src/engine/sprite.c",
+		"/D/Lexou/Projects/Castlevania/C/src/engine/render.c",
+		"/D/Lexou/Projects/Castlevania/C/src/object/pickup.h",
+		"/D/Lexou/Projects/Castlevania/C/src/menu/render_pause_equip.c",
+		"/D/Lexou/Projects/Castlevania/C/src/menu/render_pause.c",
+		"/D/Lexou/Projects/Castlevania/C/src/object/candle.c",
+		"/D/Lexou/Projects/Castlevania/C/src/item/item.h",
+		"/D/Lexou/Projects/Castlevania/C/src/object/anim_shield.h",
+		"/D/Lexou/Projects/Castlevania/C/src/object/shield.h",
+		"/D/Lexou/Projects/Castlevania/C/src/object/anim_common.h",
+		"/D/Lexou/Projects/Castlevania/C/src/object/door.c",
+		"/D/Lexou/Projects/Castlevania/C/src/object/fx.c",
+		"/D/Lexou/Projects/Castlevania/C/src/object/anim_subweapon.h",
+		"/D/Lexou/Projects/Castlevania/C/src/object/anim_weapon.h",
+		"/D/Lexou/Projects/Castlevania/C/src/object/shield.c",
+		"/D/Lexou/Projects/Castlevania/C/src/object/weapon.h",
+		"/D/Lexou/Projects/Castlevania/C/src/object/weapon.c",
+		"/D/Lexou/Projects/Castlevania/C/src/object/subweapon_item.c",
+		"/D/Lexou/Projects/Castlevania/C/src/object/candle.h",
+		"/D/Lexou/Projects/Castlevania/C/src/object/door.h",
+		"/D/Lexou/Projects/Castlevania/C/src/object/fx.h",
+		"/D/Lexou/Projects/Castlevania/C/src/object/item.c",
+		"/D/Lexou/Projects/Castlevania/C/src/debug.c",
+		"/D/Lexou/Projects/Castlevania/C/src/debug.h",
+		"/D/Lexou/Projects/Castlevania/C/src/enemy/enemy.c",
+		"/D/Lexou/Projects/Castlevania/C/src/engine/event.c",
+		"/D/Lexou/Projects/Castlevania/C/src/engine/collide.c",
+		"/D/Lexou/Projects/Castlevania/C/src/engine/ppu_free.c",
+		"/D/Lexou/Projects/Castlevania/C/src/init.c",
+		"/D/Lexou/Projects/Castlevania/C/src/assets_macos.h",
+		"/D/Lexou/Projects/Castlevania/C/src/config.c",
+		"/D/Lexou/Projects/Castlevania/C/src/config_ini.c",
+		"/D/Lexou/Projects/Castlevania/C/src/player/spells.h",
+		"/D/Lexou/Projects/Castlevania/C/src/stage/room.c",
+		"/D/Lexou/Projects/Castlevania/C/src/menu/render_debug.c",
+		"/D/Lexou/Projects/Castlevania/C/src/engine/inputsequence.h",
+		"/D/Lexou/Projects/Castlevania/C/src/engine/collide.h",
+		"/D/Lexou/Projects/Castlevania/C/src/engine/camera.h",
+		"/D/Lexou/Projects/Castlevania/C/src/engine/camera_shake.c",
+		"/D/Lexou/Projects/Castlevania/C/src/engine/camera_fade.c",
+		"/D/Lexou/Projects/Castlevania/C/src/engine/camera.c",
+		"/D/Lexou/Projects/Castlevania/C/src/stage/room.h",
+		"/D/Lexou/Projects/Castlevania/C/src/object/relic.h",
+		"/D/Lexou/Projects/Castlevania/C/src/object/subweapon_maria_anim.h",
+		"/D/Lexou/Projects/Castlevania/C/src/object/subweapon_anim.h",
+		"/D/Lexou/Projects/Castlevania/C/src/object/item.h",
+		"/D/Lexou/Projects/Castlevania/C/src/player/player_alucard_spells.h",
+		"/D/Lexou/Projects/Castlevania/C/src/config.h",
+		"/D/Lexou/Projects/Castlevania/C/src/config_access.c",
+		"/D/Lexou/Projects/Castlevania/C/src/object/relic.c",
+		"/D/Lexou/Projects/Castlevania/C/src/enemy/enemy.h",
+		"/D/Lexou/Projects/Castlevania/C/sublimetext-regreplace.json",
+		"/C/Users/Lexou/AppData/Roaming/Sublime Text 3/Packages/User/Default.sublime-commands",
+		"/C/Users/Lexou/AppData/Roaming/Sublime Text 3/Packages/User/reg_replace_rules.sublime-settings",
+		"/D/Lexou/Projects/Castlevania/C/src/player/level.h",
+		"/D/Lexou/Projects/Castlevania/C/src/menu/portrait.h",
+		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/src/App.tsx",
+		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/README.md",
+		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/src/App.test.tsx"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 148.0,
+		"where_history":
+		[
+			"D:\\Lexou\\Projects\\Castlevania\\C\\src",
+			"D:\\Lexou\\Projects\\Castlevania\\C\\src,",
+			"D:\\Lexou\\Projects\\Castlevania\\C\\src,*.c",
+			"D:\\Lexou\\Projects\\Castlevania\\C\\src",
+			"D:\\Lexou\\Projects\\Castlevania\\C\\src,*.c",
+			"D:\\Lexou\\Projects\\Castlevania\\C\\src",
+			"D:\\Lexou\\Projects\\Castlevania\\C\\src,*.h",
+			"D:\\Lexou\\Projects\\Castlevania\\C\\src",
+			"D:\\Lexou\\Projects\\Castlevania\\NES\\Nes_Snd_Emu-0.1.7",
+			"D:\\Lexou\\Projects\\Castlevania\\C\\src"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"ALUCARD_ACTION_SPELL",
+			"maxspeed",
+			"inc_player_anim_marias",
+			"inc_player_anim_richters",
+			"inc_player_anim_alucards",
+			"SEIRYUU",
+			"seiryuu",
+			"Seiryuu",
+			"CheckSpell",
+			"player_anim_richter.h",
+			"player_anim_alucard.h",
+			"player_anim_maria.h",
+			"_maria_anim",
+			"_alucard_anim",
+			"_richter_anim",
+			"PPU_Map_Load(",
+			"float",
+			"FT_MemorySwap",
+			" player_richter_",
+			"uint32",
+			"float",
+			"tan",
+			"pow",
+			"Current.items",
+			"Current.room->update(",
+			"Pause_map.",
+			"Pause_relics.",
+			"Pause_equip.",
+			"Pause_equip.selected_item",
+			"Pause_equip_selected",
+			"Relics",
+			"Stats",
+			"Relics",
+			")\n",
+			"candle->drop",
+			"Render_Item(",
+			"\"clo_",
+			"\"use_",
+			"\"item_cloak_",
+			"\"item_usable_",
+			"\"item_shield_",
+			"\"item_weapon_",
+			"inc_player_richter_anim_",
+			"inc_player_maria_anim_",
+			"MARIA_ANIM_",
+			"RICHTER_ANIM_",
+			"ALUCARD_ANIM_",
+			"inc_player_alucard_anim_",
+			"anim_commons",
+			"anim_subwep_marias",
+			"anim_subweps",
+			"anim_shields",
+			"anim_weapons",
+			"anim_shield",
+			"ANIM_SHIELDTYPE",
+			"anim_common_",
+			"weapon_anim",
+			"subwep_maria_anim",
+			"subwep_anim",
+			"shield_anim",
+			"SUBWEP_MARIA_ANIM_",
+			"SUBWEP_ANIM",
+			"SUBWEAPON_ANIM",
+			"WEAPON_ANIM",
+			"SHIELD_ANIM",
+			"COMMON_ANIM",
+			"common_anim",
+			"Pickup_collide_y(",
+			"pickup_collide_y",
+			"FindDestroy_FX(",
+			"pickup_find_destroy(",
+			"init_item(",
+			"fx_drops_update(",
+			"fx_debris_update(",
+			"fx_debris_collide_y",
+			"fx_debris_collide_y(",
+			"fx_find_destroy(",
+			"static void",
+			"debug_output_error(",
+			"debug_output_value(",
+			"debug_output(",
+			"player_init_maria(",
+			"player_init_richter(",
+			"player_init_alucard(",
+			"player_update_currentroom(",
+			"player_update_debuff_wet(",
+			"player_update_debuff(",
+			"player_spell_highjump(",
+			"player_land(",
+			"player_change_character(",
+			"player_check_spell(",
+			"player_check_stats(",
+			"player_update(",
+			"weapon_attack(",
+			"weapon_update(",
+			"shield_deploy(",
+			"shield_update(",
+			"pickup_update(",
+			"pickup_destroy(",
+			"pickup_init(",
+			"fx_update(",
+			"fx_destroy(",
+			"fx_init(",
+			"door_update(",
+			"door_destroy(",
+			"door_init(",
+			"render_pause_equip_itemlist(",
+			"render_pause_equip_itemdesc(",
+			"render_pause_equip_icon(",
+			"render_playerstats(",
+			"render_hud_spellname(",
+			"render_hud_collected(",
+			"render_hud_areaname(",
+			"render_hud_notify(",
+			"render_subweapon(",
+			"render_debug_rect(",
+			"render_pause(",
+			"render_pause_equip(",
+			"game_handlestate_pause(",
+			"game_handlestate_pause_equip(",
+			"game_changestate_pause_equip(",
+			"can_equip(",
+			"game_handlestate_pause_equip_itemlist(",
+			"sprite_anim_framecheck(",
+			"sprite_anim_framechange(",
+			"render_gettransformedtile(",
+			"input_setdefaultbindings_keyboard(",
+			"input_setdefaultbindings_joystick("
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"ALUCARD_ACTION_SPELLCAST",
+			"speed_max",
+			"inc_player_maria_anims",
+			"inc_player_richter_anims",
+			"inc_player_alucard_anims",
+			"SEIRYU",
+			"seiryu",
+			"Seiryu",
+			"player_richter_anim.h",
+			"player_alucard_anim.h",
+			"player_maria_anim.h",
+			"_anim_maria",
+			"_anim_alucard",
+			"_anim_richter",
+			"PPU_Load_Map(",
+			"t_float",
+			" inc_player_richter_",
+			"t_u32",
+			"t_float",
+			"Current.inventory",
+			"Pause.map.",
+			"Pause.relics.",
+			"Pause.equip.",
+			"Pause_relics.selected_index",
+			"Pause_equip.selected",
+			"Config",
+			"Spells",
+			"Bestiary",
+			"Familiars",
+			"Stats",
+			"\"C_",
+			"\"U_",
+			"\"clo_",
+			"\"use_",
+			"anim_player_richter_",
+			"anim_player_maria_",
+			"anim_player_maria",
+			"ANIM_MARIA_",
+			"ANIM_RICHTER_",
+			"ANIM_ALUCARD_",
+			"anim_player_alucard_",
+			"common_anims",
+			"subwep_maria_anims",
+			"subwep_anims",
+			"shield_anims",
+			"weapon_anims",
+			"shield_animtype",
+			"SHIELD_ANIMTYPE",
+			"ANIM_COMMON_",
+			"anim_weapon",
+			"anim_subwep_maria",
+			"anim_subwep",
+			"anim_shield",
+			"ANIM_SUBWEP_MARIA",
+			"ANIM_SUBWEP",
+			"ANIM_SUBWEAPON",
+			"ANIM_WEAPON",
+			"ANIM_SHIELD",
+			"ANIM_COMMON",
+			"anim_common",
+			"Pickup_collide_y",
+			"Pickup_collide_y(",
+			"FindAndDestroy_FX(",
+			"FindAndDestroy_Pickup(",
+			"Init_Item(",
+			"Update_FX_WaterDrops(",
+			"Update_FX_Debris(",
+			"FX_Debris_collide_y",
+			"FX_Debris_collide_y(",
+			"FindDestroy_FX(",
+			"Debug_Output_SDLError(",
+			"Debug_Output_Value(",
+			"Debug_Output(",
+			"Init_Player_Maria(",
+			"Init_Player_Richter(",
+			"Init_Player_Alucard(",
+			"Player_Update_CurrentRoom(",
+			"Player_Update_Debuff_Wet(",
+			"Player_Update_Debuffs(",
+			"Player_Spell_HighJump(",
+			"Player_Land(",
+			"Player_ChangeCharacter(",
+			"Player_CheckSpell(",
+			"Player_CheckStats(",
+			"Update_Player(",
+			"Weapon_Attack(",
+			"Update_Weapon(",
+			"Shield_Deploy(",
+			"Update_Shield(",
+			"Update_Pickup(",
+			"Destroy_Pickup(",
+			"Spawn_Pickup(",
+			"Update_FX(",
+			"Destroy_FX(",
+			"Spawn_FX(",
+			"Update_Door(",
+			"Destroy_Door(",
+			"Spawn_Door(",
+			"Render_Pause_Equip_ItemList(",
+			"Render_Pause_Equip_ItemDescription(",
+			"Render_Pause_Equip_Icon(",
+			"Render_CharacterStats(",
+			"Render_HUD_SpellName(",
+			"Render_HUD_Collected(",
+			"Render_HUD_AreaName(",
+			"Render_HUD_Notify(",
+			"Render_Subweapon(",
+			"Render_Debug_Rect(",
+			"Render_Pause(",
+			"Render_Pause_Equip(",
+			"Game_HandleState_Pause(",
+			"Game_HandleState_Pause_Equip(",
+			"Game_ChangeState_Pause_Equip(",
+			"CanEquip(",
+			"Game_HandleState_Pause_Equip_ItemList(",
+			"Sprite_CheckCounter(",
+			"Sprite_ChangeFrame(",
+			"Render_Sprites_GetTransformedTile(",
+			"Input_SetDefaultBindings_Keyboard(",
+			"Input_SetDefaultBindings_Joystick(",
+			"Config_InitSettings(",
+			"Config_InitSettings",
+			"Render_Relic(",
+			"Render_Item(",
+			"Render_Portrait(",
+			"Render_MiniMap(",
+			"Render_Bar(",
+			"Render_TileRect("
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "WebDev_Notes",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 31465,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								26549,
+								26549
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 11441.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 706,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "tsconfig.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 453,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": ".gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 310,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Git Formats/Git Ignore.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/App.test.tsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 245,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript Syntax/TypeScriptReact.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/App.tsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 781,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								96,
+								98
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript Syntax/TypeScriptReact.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/D/Lexou/Projects/Website/HTML/assets/main.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1100,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/App.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 474,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								81,
+								81
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/index.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 379,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 38.0
+	},
+	"input":
+	{
+		"height": 58.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.scopehunter.results":
+	{
+		"height": 90.0
+	},
+	"pinned_build_system": "",
+	"project": "project.sublime-project",
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 315.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
