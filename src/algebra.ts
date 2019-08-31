@@ -120,6 +120,28 @@ class DualNumber extends Alg2
 ** Functions for interop
 */
 
+function newAlg2(alg2_class : Alg2Class, x : number, y : number)
+{
+	switch (alg2_class)
+	{
+		case Alg2Class.COMPLEX : 		return new Complex(x, y);
+		case Alg2Class.SPLIT_COMPLEX :	return new SplitComplex(x, y);
+		case Alg2Class.DUAL_NUMBER :	return new DualNumber(x, y);
+		default : console.log("Unexpected error in getAlg2_null"); return new Complex(x, y);
+	}
+}
+
+function getAlg2_copy(alg2 : Alg2)
+{
+	switch (alg2.getClassEnum())
+	{
+		case Alg2Class.COMPLEX : 		return new Complex(alg2.x, alg2.y);
+		case Alg2Class.SPLIT_COMPLEX :	return new SplitComplex(alg2.x, alg2.y);
+		case Alg2Class.DUAL_NUMBER :	return new DualNumber(alg2.x, alg2.y);
+		default : console.log("Unexpected error in getAlg2_null"); return new Complex(alg2.x, alg2.y);
+	}
+}
+
 function getAlg2_add(alg2_class : Alg2Class)
 {
 	switch (alg2_class)
@@ -311,4 +333,5 @@ class DualNumberPoly extends Poly2
 
 
 export {Alg2, Complex, SplitComplex, DualNumber, Alg2Class,
-		Poly2, ComplexPoly, SplitComplexPoly, DualNumberPoly}
+		Poly2, ComplexPoly, SplitComplexPoly, DualNumberPoly,
+		newAlg2, getAlg2_copy};

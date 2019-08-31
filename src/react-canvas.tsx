@@ -39,8 +39,8 @@ function MyShape() {
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {samplePointsOnPlane, fractalRender_Simple, dwellArray_to_colorArray,
-        DwellFunction, mandelbrotDwell,
-        Alg2, Complex, SplitComplex} from './fractals';
+        DwellFunction, mandelbrotDwell} from './fractals';
+import {Alg2, Complex, SplitComplex, DualNumber} from './algebra'
 import Color from './utils'
 
 

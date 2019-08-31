@@ -11,7 +11,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Color from './utils';
 import {Alg2, Complex, SplitComplex, DualNumber, Alg2Class,
-		Poly2, ComplexPoly, SplitComplexPoly, DualNumberPoly} from './algebra';
+		Poly2, ComplexPoly, SplitComplexPoly, DualNumberPoly,
+		newAlg2, getAlg2_copy} from './algebra';
 
 
 export type DwellFunction = (max_dwell : number, alg2 : Alg2) => number;
@@ -23,7 +24,6 @@ function samplePointsOnPlane(width : number, height : number, span : [Alg2, Alg2
 	let y : number;
 	let step : Alg2;
 	let result : Alg2[][];
-	let is_complex = (span[0] instanceof Complex);
 
 	if (span[0].x > span[1].x)
 	{
@@ -38,16 +38,8 @@ function samplePointsOnPlane(width : number, height : number, span : [Alg2, Alg2
 		span[1].y = y;
 	}
 
-	if (is_complex)
-	{
-		step = new Complex((span[1].x - span[0].x) / width,
-							(span[1].y - span[0].y) / height);
-	}
-	else
-	{
-		step = new SplitComplex((span[1].x - span[0].x) / width,
-							(span[1].y - span[0].y) / height);
-	}
+	step = newAlg2(span[0].getClassEnum(), (span[1].x - span[0].x) / width, (span[1].y - span[0].y) / height);
+
 	result = [];
 	for (y = 0; y < height; y++)
 	{
@@ -56,15 +48,7 @@ function samplePointsOnPlane(width : number, height : number, span : [Alg2, Alg2
 		for (x = 0; x < width; x++)
 		{
 			let x_pos = span[0].x + x * step.x;
-			let new_item : Alg2;
-			if (is_complex)
-			{
-				new_item = new Complex(x_pos, y_pos);
-			}
-			else
-			{
-				new_item = new SplitComplex(x_pos, y_pos);
-			}
+			let new_item = newAlg2(span[0].getClassEnum(), x_pos, y_pos);
 			pointline.push(new_item);
 		}
 		result.push(pointline);
@@ -126,10 +110,7 @@ function mandelbrotDwell(max_dwell : number, start: Alg2)
 	let dwell = 0;
 	let z : Alg2;
 
-	if (start instanceof Complex)
-		z = new Complex(start.x, start.y);
-	else
-		z = new SplitComplex(start.x, start.y);
+	z = getAlg2_copy(start);
 
 	while (Math.abs(z.quadnorm()) < 4 && dwell < max_dwell)
 	{
