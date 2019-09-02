@@ -1,14 +1,18 @@
 import React from 'react';
 import './App.css';
-import {MandelbrotCanvas, Color} from './react-canvas';
-import {Complex, SplitComplex, DualNumber} from './algebra'
+import {FractalApp} from './main'
+
+
 
 const App: React.FC = () =>
 {
 	return (
 		<div className="App">
 			<header className="App-header">
-				<MandelbrotCanvas width={1024} height={1024} span={[new Complex(-2, -2), new Complex(2, 2)]} />
+				<FractalApp
+					span_x={2}
+					span_y={2}
+				/>
 			</header>
 		</div>
 	);

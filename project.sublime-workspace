@@ -520,39 +520,6 @@
 	"buffers":
 	[
 		{
-			"file": "WebDev_Notes",
-			"settings":
-			{
-				"buffer_size": 31465,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "package.json",
-			"settings":
-			{
-				"buffer_size": 706,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "tsconfig.json",
-			"settings":
-			{
-				"buffer_size": 453,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": ".gitignore",
-			"settings":
-			{
-				"buffer_size": 310,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "src/App.test.tsx",
 			"settings":
 			{
@@ -564,15 +531,69 @@
 			"file": "src/App.tsx",
 			"settings":
 			{
-				"buffer_size": 781,
+				"buffer_size": 580,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/D/Lexou/Projects/Website/HTML/assets/main.css",
+			"file": "src/fractals.tsx",
 			"settings":
 			{
-				"buffer_size": 1100,
+				"buffer_size": 2641,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/algebra.ts",
+			"settings":
+			{
+				"buffer_size": 6756,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/react-canvas.tsx",
+			"settings":
+			{
+				"buffer_size": 4686,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/menu.tsx",
+			"settings":
+			{
+				"buffer_size": 981,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/manifest.json",
+			"settings":
+			{
+				"buffer_size": 286,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 788,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/index.html",
+			"settings":
+			{
+				"buffer_size": 1567,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -592,6 +613,14 @@
 				"buffer_size": 379,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "/D/Lexou/Projects/Website/HTML/assets/main.css",
+			"settings":
+			{
+				"buffer_size": 1100,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -605,6 +634,22 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install packag",
+				"Package Control: Install Package"
+			],
+			[
+				"pack ins",
+				"Package Control: Install Package"
+			],
 			[
 				"NES",
 				"NES Screen Tool metasprite OBJ c code cleaner"
@@ -622,10 +667,6 @@
 				"NES Screen Tool metasprite OBJ c code cleaner"
 			],
 			[
-				"pack ins",
-				"Package Control: Install Package"
-			],
-			[
 				"inst",
 				"Package Control: Install Package"
 			],
@@ -635,10 +676,6 @@
 			],
 			[
 				"remov",
-				"Package Control: Remove Package"
-			],
-			[
-				"pack",
 				"Package Control: Remove Package"
 			],
 			[
@@ -668,10 +705,6 @@
 			[
 				"prv",
 				"PackageResourceViewer: View Package Resource"
-			],
-			[
-				"instal",
-				"Package Control: Install Package"
 			],
 			[
 				"remove",
@@ -752,10 +785,20 @@
 	"expanded_folders":
 	[
 		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test",
+		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/public",
 		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/src"
 	],
 	"file_history":
 	[
+		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/tsconfig.json",
+		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/public/index.html",
+		"/D/Lexou/Projects/Website/HTML/games.html",
+		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/package.json",
+		"/D/Lexou/Documents/School Stuff/42/06-fractol/src/fractal.c",
+		"/D/Lexou/Documents/School Stuff/42/06-fractol/src/palette.c",
+		"/D/Lexou/Projects/Website/HTML/_templates.html",
+		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/.gitignore",
+		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/WebDev_Notes",
 		"/D/Lexou/Projects/Castlevania/C/src/assets.c",
 		"/D/Lexou/Projects/Castlevania/C/src/player/player_maria.c",
 		"/D/Lexou/Projects/Castlevania/C/src/player/player_richter.c",
@@ -766,7 +809,6 @@
 		"/D/Lexou/Projects/Castlevania/C/src/engine/ppu_init.c",
 		"/D/Lexou/Projects/Castlevania/C/src/item/usable_weapon.c",
 		"/D/Lexou/Projects/Castlevania/C/Makefile",
-		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/tsconfig.json",
 		"/D/Lexou/Projects/Castlevania/C/tiled-castlevania.py",
 		"/D/Lexou/Projects/Castlevania/C/src/stage/stage.c",
 		"/D/Lexou/Projects/Castlevania/C/src/player/player_alucard.h",
@@ -875,15 +917,7 @@
 		"/D/Lexou/Projects/Castlevania/C/src/config.h",
 		"/D/Lexou/Projects/Castlevania/C/src/config_access.c",
 		"/D/Lexou/Projects/Castlevania/C/src/object/relic.c",
-		"/D/Lexou/Projects/Castlevania/C/src/enemy/enemy.h",
-		"/D/Lexou/Projects/Castlevania/C/sublimetext-regreplace.json",
-		"/C/Users/Lexou/AppData/Roaming/Sublime Text 3/Packages/User/Default.sublime-commands",
-		"/C/Users/Lexou/AppData/Roaming/Sublime Text 3/Packages/User/reg_replace_rules.sublime-settings",
-		"/D/Lexou/Projects/Castlevania/C/src/player/level.h",
-		"/D/Lexou/Projects/Castlevania/C/src/menu/portrait.h",
-		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/src/App.tsx",
-		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/README.md",
-		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/src/App.test.tsx"
+		"/D/Lexou/Projects/Castlevania/C/src/enemy/enemy.h"
 	],
 	"find":
 	{
@@ -911,6 +945,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"dev-server",
+			"webpack",
 			"ALUCARD_ACTION_SPELL",
 			"maxspeed",
 			"inc_player_anim_marias",
@@ -1036,9 +1072,7 @@
 			"game_handlestate_pause_equip_itemlist(",
 			"sprite_anim_framecheck(",
 			"sprite_anim_framechange(",
-			"render_gettransformedtile(",
-			"input_setdefaultbindings_keyboard(",
-			"input_setdefaultbindings_joystick("
+			"render_gettransformedtile("
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1184,126 +1218,11 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "WebDev_Notes",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 31465,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								26549,
-								26549
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 11441.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 706,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "tsconfig.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 453,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": ".gitignore",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 310,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Git Formats/Git Ignore.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
 					"file": "src/App.test.tsx",
 					"semi_transient": false,
 					"settings":
@@ -1321,7 +1240,38 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/TypeScript Syntax/TypeScriptReact.tmLanguage"
+							"syntax": "Packages/TypeScript Syntax/TypeScriptReact.tmLanguage",
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/App.tsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 580,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								73,
+								73
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript Syntax/TypeScriptReact.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"use_tab_stops": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1331,41 +1281,72 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "src/App.tsx",
+					"buffer": 2,
+					"file": "src/fractals.tsx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 781,
+						"buffer_size": 2641,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								96,
-								98
+								217,
+								156
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/TypeScript Syntax/TypeScriptReact.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/TypeScript/TypeScriptReact.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"use_tab_stops": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "/D/Lexou/Projects/Website/HTML/assets/main.css",
+					"buffer": 3,
+					"file": "src/algebra.ts",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1100,
+						"buffer_size": 6756,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5904,
+								5904
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1326.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/react-canvas.tsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4686,
 						"regions":
 						{
 						},
@@ -1378,18 +1359,151 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"syntax": "Packages/TypeScript/TypeScriptReact.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1686.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/menu.tsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 981,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								667,
+								667
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/TypeScript/TypeScriptReact.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 179.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "public/manifest.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 286,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								63,
+								63
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 7,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 788,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								382,
+								382
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "public/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1567,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								98,
+								98
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
 					"file": "src/App.css",
 					"semi_transient": false,
 					"settings":
@@ -1401,8 +1515,8 @@
 						"selection":
 						[
 							[
-								81,
-								81
+								402,
+								402
 							]
 						],
 						"settings":
@@ -1414,11 +1528,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 10,
 					"file": "src/index.css",
 					"semi_transient": false,
 					"settings":
@@ -1443,7 +1557,36 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/D/Lexou/Projects/Website/HTML/assets/main.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1100,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
 					"type": "text"
 				}
 			]
@@ -1481,6 +1624,10 @@
 	},
 	"menu_visible": true,
 	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.doc":
 	{
 		"height": 0.0
 	},
