@@ -1,3 +1,4 @@
+
 function bindValue(value : number, min : number, max : number)
 {
     if (max < min)
@@ -27,7 +28,7 @@ function swap<T>(pair: {val1 : T, val2 : T})
 
 
 
-class Color
+export class Color
 {
 //    a : number;
     r : number;
@@ -61,5 +62,20 @@ class Color
 }
 
 
+
+export function makeGrayscalePalette(max_dwell:number)
+{
+    let result : Color[];
+
+    result = [];
+    for (let i = 0; i < max_dwell; i++)
+    {
+        let lerp_val = (i + 1) * 255 / max_dwell;
+        result.push(new Color(lerp_val, lerp_val, lerp_val));
+    }
+    result.push(new Color(0, 0, 0));
+
+    return (result);
+}
 
 export default Color;
