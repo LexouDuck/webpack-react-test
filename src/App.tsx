@@ -10,8 +10,10 @@ const App: React.FC = () =>
 		<div className="App">
 			<header className="App-header">
 				<FractalApp
-					span_x={2}
-					span_y={2}
+					min_x={-2}
+					min_y={-2}
+					max_x={2}
+					max_y={2}
 				/>
 			</header>
 		</div>

@@ -531,7 +531,25 @@
 			"file": "src/App.tsx",
 			"settings":
 			{
-				"buffer_size": 580,
+				"buffer_size": 402,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/main.tsx",
+			"settings":
+			{
+				"buffer_size": 1798,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/react-canvas.tsx",
+			"settings":
+			{
+				"buffer_size": 4223,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -549,76 +567,6 @@
 			"settings":
 			{
 				"buffer_size": 6756,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/react-canvas.tsx",
-			"settings":
-			{
-				"buffer_size": 4686,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/menu.tsx",
-			"settings":
-			{
-				"buffer_size": 981,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/manifest.json",
-			"settings":
-			{
-				"buffer_size": 286,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "package.json",
-			"settings":
-			{
-				"buffer_size": 788,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/index.html",
-			"settings":
-			{
-				"buffer_size": 1567,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/App.css",
-			"settings":
-			{
-				"buffer_size": 474,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/index.css",
-			"settings":
-			{
-				"buffer_size": 379,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/D/Lexou/Projects/Website/HTML/assets/main.css",
-			"settings":
-			{
-				"buffer_size": 1100,
 				"line_ending": "Unix"
 			}
 		}
@@ -790,10 +738,15 @@
 	],
 	"file_history":
 	[
-		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/tsconfig.json",
+		"/D/Lexou/Projects/Website/HTML/assets/main.css",
+		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/src/index.css",
+		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/src/App.css",
 		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/public/index.html",
-		"/D/Lexou/Projects/Website/HTML/games.html",
 		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/package.json",
+		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/src/react-canvas.tsx",
+		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/public/manifest.json",
+		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/tsconfig.json",
+		"/D/Lexou/Projects/Website/HTML/games.html",
 		"/D/Lexou/Documents/School Stuff/42/06-fractol/src/fractal.c",
 		"/D/Lexou/Documents/School Stuff/42/06-fractol/src/palette.c",
 		"/D/Lexou/Projects/Website/HTML/_templates.html",
@@ -912,12 +865,7 @@
 		"/D/Lexou/Projects/Castlevania/C/src/object/relic.h",
 		"/D/Lexou/Projects/Castlevania/C/src/object/subweapon_maria_anim.h",
 		"/D/Lexou/Projects/Castlevania/C/src/object/subweapon_anim.h",
-		"/D/Lexou/Projects/Castlevania/C/src/object/item.h",
-		"/D/Lexou/Projects/Castlevania/C/src/player/player_alucard_spells.h",
-		"/D/Lexou/Projects/Castlevania/C/src/config.h",
-		"/D/Lexou/Projects/Castlevania/C/src/config_access.c",
-		"/D/Lexou/Projects/Castlevania/C/src/object/relic.c",
-		"/D/Lexou/Projects/Castlevania/C/src/enemy/enemy.h"
+		"/D/Lexou/Projects/Castlevania/C/src/object/item.h"
 	],
 	"find":
 	{
@@ -945,6 +893,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"ctx",
 			"dev-server",
 			"webpack",
 			"ALUCARD_ACTION_SPELL",
@@ -1071,8 +1020,7 @@
 			"can_equip(",
 			"game_handlestate_pause_equip_itemlist(",
 			"sprite_anim_framecheck(",
-			"sprite_anim_framechange(",
-			"render_gettransformedtile("
+			"sprite_anim_framechange("
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1080,6 +1028,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"context",
 			"ALUCARD_ACTION_SPELLCAST",
 			"speed_max",
 			"inc_player_maria_anims",
@@ -1206,8 +1155,7 @@
 			"Render_Item(",
 			"Render_Portrait(",
 			"Render_MiniMap(",
-			"Render_Bar(",
-			"Render_TileRect("
+			"Render_Bar("
 		],
 		"reverse": false,
 		"show_context": true,
@@ -1218,7 +1166,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -1247,7 +1195,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1256,21 +1204,27 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 580,
+						"buffer_size": 402,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								73,
-								73
+								230,
+								230
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/TypeScript Syntax/TypeScriptReact.tmLanguage",
 							"translate_tabs_to_spaces": false,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 4,
+								"tabSize": 4
+							},
 							"use_tab_stops": false
 						},
 						"translation.x": 0.0,
@@ -1282,6 +1236,81 @@
 				},
 				{
 					"buffer": 2,
+					"file": "src/main.tsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1798,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								874,
+								874
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/TypeScript/TypeScriptReact.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 39.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/react-canvas.tsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4223,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2925,
+								2925
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript/TypeScriptReact.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1542.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
 					"file": "src/fractals.tsx",
 					"semi_transient": false,
 					"settings":
@@ -1304,14 +1333,14 @@
 							"use_tab_stops": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 897.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 5,
 					"file": "src/algebra.ts",
 					"semi_transient": false,
 					"settings":
@@ -1329,76 +1358,12 @@
 						],
 						"settings":
 						{
+							"auto_complete": true,
+							"extensions":
+							[
+								"ts"
+							],
 							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1326.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/react-canvas.tsx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4686,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/TypeScript/TypeScriptReact.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": true,
-								"indentSize": 4,
-								"tabSize": 4
-							},
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1686.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/menu.tsx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 981,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								667,
-								667
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/TypeScript/TypeScriptReact.tmLanguage",
-							"tab_size": 4,
 							"translate_tabs_to_spaces": false,
 							"typescript_plugin_format_options":
 							{
@@ -1409,184 +1374,10 @@
 							"use_tab_stops": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 179.0,
+						"translation.y": 3737.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "public/manifest.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 286,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								63,
-								63
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 788,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								382,
-								382
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "public/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1567,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								98,
-								98
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "src/App.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 474,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								402,
-								402
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "src/index.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 379,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "/D/Lexou/Projects/Website/HTML/assets/main.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1100,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1643,7 +1434,7 @@
 	"project": "project.sublime-project",
 	"replace":
 	{
-		"height": 72.0
+		"height": 70.0
 	},
 	"save_all_on_build": true,
 	"select_file":

@@ -1,20 +1,25 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {MandelbrotCanvas, Color} from './react-canvas';
-import {Complex, SplitComplex, DualNumber} from './algebra'
+import {Menu} from "./menu"
+import {MandelbrotCanvas, Color} from "./react-canvas";
+import {Complex, SplitComplex, DualNumber} from "./algebra"
 
 
 
-interface AppProps
+export interface AppProps
 {
-	span_x:number,
-	span_y:number,
+	min_x:number,
+	min_y:number,
+	max_x:number,
+	max_y:number,
 };
 
-interface AppState
+export interface AppState
 {
-	span_x:number,
-	span_y:number,
+	min_x:number,
+	min_y:number,
+	max_x:number,
+	max_y:number,
 };
 
 class FractalApp extends React.Component<AppProps, AppState>
@@ -24,52 +29,32 @@ class FractalApp extends React.Component<AppProps, AppState>
 		super(props, state);
 		this.state =
 		{
-			span_x: 2,
-			span_y: 2,
+			min_x: props.min_x,
+			min_y: props.min_y,
+			max_x: props.max_x,
+			max_y: props.max_y,
 		};
-		this.handleChange_X = this.handleChange_X.bind(this);
-		this.handleChange_Y = this.handleChange_Y.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this);
+
+		this.update = this.update.bind(this);
 	}
 
-	componentDidMount()
+	update(state:AppState)
 	{
-		this.render();
-	}
-
-	handleChange_X(event:React.ChangeEvent<HTMLInputElement>)
-	{
-		this.setState({span_x: Number(event.target.value)});
-	}
-	handleChange_Y(event:React.ChangeEvent<HTMLInputElement>)
-	{
-		this.setState({span_y: Number(event.target.value)});
-	}
-
-	handleSubmit(event:React.FormEvent<HTMLFormElement>)
-	{
-		event.preventDefault();
-		alert("Span X: " + this.state.span_x + "\nSpan Y: " + this.state.span_y);
-		this.render();
+		this.setState(state);
 	}
 
 	render()
 	{
 		return (
 			<div className="FractalApp">
-				<form onSubmit={this.handleSubmit}>
-					<label>
-						Span X:	<input type="number" value={this.state.span_x} onChange={this.handleChange_X} />	<br/>
-						Span Y:	<input type="number" value={this.state.span_y} onChange={this.handleChange_Y} />	<br/>
-					</label>
-					<input type="submit" value="Submit" />
-				</form>
-				Span X:	{this.state.span_x}	<br/>
-				Span Y:	{this.state.span_y}	<br/>
+				<Menu
+					default={this.state}
+					update={this.update}
+				/>
 				<MandelbrotCanvas
 					width={1024}
 					height={1024}
-					span={[new Complex(-this.state.span_x, -this.state.span_y), new Complex(this.state.span_x, this.state.span_y)]}
+					span={[new Complex(this.state.min_x, this.state.min_y), new Complex(this.state.max_x, this.state.max_y)]}
 				/>
 			</div>
 		);
