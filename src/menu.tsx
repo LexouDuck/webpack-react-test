@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {AppProps, AppState} from './main'
+import {State_FractalApp} from './main'
 
 
 
@@ -8,7 +8,7 @@ interface Props_MenuItem_Number
 {
 	label:string,
 	value:number,
-	update:(value:number)=>void
+	update:(value:number)=>boolean
 }
 interface State_MenuItem_Number
 {
@@ -25,15 +25,17 @@ class MenuItem_Number extends React.Component<Props_MenuItem_Number, State_MenuI
 	handleChange_Number(event:React.ChangeEvent<HTMLInputElement>)
 	{
 		let new_value:number = Number(event.target.value);
-		this.setState({ value: new_value });
-		this.props.update(new_value);
+		if (this.props.update(new_value))
+		{
+			this.setState({ value: new_value });
+		}
 	}
 
 	render()
 	{
 		return (
 			<label>
-				{this.props.label}	<input type="number" value={this.state.value} onChange={this.handleChange_Number.bind(this)} />	<br/>
+				{this.props.label}	<input type="number" step="any" value={this.state.value} onChange={this.handleChange_Number.bind(this)} />	<br/>
 			</label>
 		);
 	}
@@ -41,17 +43,17 @@ class MenuItem_Number extends React.Component<Props_MenuItem_Number, State_MenuI
 
 
 
-interface MenuProps
+interface Props_Menu
 {
-	default:AppState,
-	update:(state:AppState)=>void
+	default:State_FractalApp,
+	update:(state:State_FractalApp)=>void
 }
 
-class Menu extends React.Component<MenuProps>
+class Menu extends React.Component<Props_Menu>
 {
-	state_menu:AppState;
+	state_menu:State_FractalApp;
 
-	constructor(props:MenuProps)
+	constructor(props:Props_Menu)
 	{
 		super(props);
 		this.state_menu =
@@ -63,21 +65,33 @@ class Menu extends React.Component<MenuProps>
 		};
 	}
 
-	handleChange_MinX(value:number)
+	handleChange_MinX(value:number):boolean
 	{
+		if (value > this.state_menu.max_x)
+			return (false);
 		this.state_menu.min_x = value;
+		return (true);
 	}
-	handleChange_MinY(value:number)
+	handleChange_MinY(value:number):boolean
 	{
+		if (value > this.state_menu.max_y)
+			return (false);
 		this.state_menu.min_y = value;
+		return (true);
 	}
-	handleChange_MaxX(value:number)
+	handleChange_MaxX(value:number):boolean
 	{
+		if (value < this.state_menu.min_x)
+			return (false);
 		this.state_menu.max_x = value;
+		return (true);
 	}
-	handleChange_MaxY(value:number)
+	handleChange_MaxY(value:number):boolean
 	{
+		if (value < this.state_menu.min_y)
+			return (false);
 		this.state_menu.max_y = value;
+		return (true);
 	}
 
 	handleSubmit(event:React.FormEvent<HTMLFormElement>)

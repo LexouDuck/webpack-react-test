@@ -6,7 +6,7 @@ import {Complex, SplitComplex, DualNumber} from "./algebra"
 
 
 
-export interface AppProps
+export interface State_FractalApp
 {
 	min_x:number,
 	min_y:number,
@@ -14,17 +14,9 @@ export interface AppProps
 	max_y:number,
 };
 
-export interface AppState
+class FractalApp extends React.Component<State_FractalApp, State_FractalApp>
 {
-	min_x:number,
-	min_y:number,
-	max_x:number,
-	max_y:number,
-};
-
-class FractalApp extends React.Component<AppProps, AppState>
-{
-	constructor(props:AppProps, state:AppState)
+	constructor(props:State_FractalApp, state:State_FractalApp)
 	{
 		super(props, state);
 		this.state =
@@ -34,11 +26,9 @@ class FractalApp extends React.Component<AppProps, AppState>
 			max_x: props.max_x,
 			max_y: props.max_y,
 		};
-
-		this.update = this.update.bind(this);
 	}
 
-	update(state:AppState)
+	update(state:State_FractalApp)
 	{
 		this.setState(state);
 	}
@@ -49,7 +39,7 @@ class FractalApp extends React.Component<AppProps, AppState>
 			<div className="FractalApp">
 				<Menu
 					default={this.state}
-					update={this.update}
+					update={this.update.bind(this)}
 				/>
 				<MandelbrotCanvas
 					width={1024}
