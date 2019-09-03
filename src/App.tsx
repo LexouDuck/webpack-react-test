@@ -10,6 +10,7 @@ const App: React.FC = () =>
 		<div className="App">
 			<header className="App-header">
 				<FractalApp
+					dwell={16}
 					min_x={-2}
 					min_y={-2}
 					max_x={2}

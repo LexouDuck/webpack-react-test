@@ -1,44 +1,38 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {Menu} from "./menu";
-import {MandelbrotCanvas, Color} from "./react-canvas";
-import {Complex, SplitComplex, DualNumber} from "./algebra";
+import {Menu} from "./menu"
+import {FractalCanvas} from "./canvas";
+import {DwellFunction, mandelbrotDwell} from './fractals';
+import {Complex, SplitComplex, DualNumber} from "./algebra"
+import {Color, makeGrayscalePalette} from "./color"
 
 
 
-export interface AppProps
+export interface State_FractalApp
 {
+	dwell:number,
 	min_x:number,
 	min_y:number,
 	max_x:number,
 	max_y:number,
 };
 
-export interface AppState
+class FractalApp extends React.Component<State_FractalApp, State_FractalApp>
 {
-	min_x:number,
-	min_y:number,
-	max_x:number,
-	max_y:number,
-};
-
-class FractalApp extends React.Component<AppProps, AppState>
-{
-	constructor(props:AppProps, state:AppState)
+	constructor(props:State_FractalApp, state:State_FractalApp)
 	{
 		super(props, state);
 		this.state =
 		{
+			dwell: props.dwell,
 			min_x: props.min_x,
 			min_y: props.min_y,
 			max_x: props.max_x,
 			max_y: props.max_y,
 		};
-
-		this.update = this.update.bind(this);
 	}
 
-	update(state:AppState)
+	update(state:State_FractalApp)
 	{
 		this.setState(state);
 	}
@@ -46,16 +40,23 @@ class FractalApp extends React.Component<AppProps, AppState>
 	render()
 	{
 		return (
-			<div className="FractalApp">
-				<Menu
-					default={this.state}
-					update={this.update}
-				/>
-				<MandelbrotCanvas
-					width={1024}
-					height={1024}
-					span={[new Complex(this.state.min_x, this.state.min_y), new Complex(this.state.max_x, this.state.max_y)]}
-				/>
+			<div className="FractalApp" style={{display:"flex"}}>
+				<div style={{width:"300px"}}>
+					<Menu
+						default={this.state}
+						update={this.update.bind(this)}
+					/>
+				</div>
+				<div style={{flexGrow:1}}>
+					<FractalCanvas
+						width={600}
+						height={600}
+						max_dwell={this.state.dwell}
+						span={[new Complex(this.state.min_x, this.state.min_y), new Complex(this.state.max_x, this.state.max_y)]}
+						palette={makeGrayscalePalette(this.state.dwell)}
+						dwell_func={mandelbrotDwell}
+					/>
+				</div>
 			</div>
 		);
 	}
