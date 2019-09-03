@@ -9,7 +9,7 @@ import * as ReactDOM from "react-dom";
 */
 import React from "react";
 import ReactDOM from "react-dom";
-import Color from './utils';
+import {Color, QuadtreeNode, Quadtree} from './utils';
 import {Alg2, Complex, SplitComplex, DualNumber, Alg2Class,
 		Poly2, ComplexPoly, SplitComplexPoly, DualNumberPoly,
 		newAlg2, getAlg2_copy} from './algebra';
@@ -104,6 +104,230 @@ function dwellArray_to_colorArray(width : number, height : number, dwell_arr : n
 
 	return (result);
 }
+
+
+class MarianiSilver_Node 
+{
+	dwell : number;
+	depth : number;
+	anchor : [number, number];
+	size : [number, number];
+
+	constructor(dwell : number,	depth : number, anchor : [number, number], size : [number, number])
+	{
+		dwell = this.dwell;
+		depth = this.depth;
+		anchor = this.anchor; 
+		size = this.size;
+	}
+
+	get_dwell()
+	{
+		return (this.dwell);
+	}
+	get_depth()
+	{
+		return (this.depth);
+	}
+	get_anchor()
+	{
+		return (this.anchor);
+	}
+	get_size()
+	{
+		return (this.size);
+	}	
+}
+
+function handlePoint_MarianiSilver(x: number, y: number,
+									point_array : Alg2[][], dwell_array : number[][],
+									max_dwell : number, dwell_func : DwellFunction)
+{
+	let dwell : number;
+	let stored_dwell: number;
+
+	stored_dwell = dwell_array[y][x];
+	if (stored_dwell != -1)
+		return (stored_dwell);
+	dwell = dwell_func(max_dwell, point_array[y][x]);
+	dwell_array[y][x] = dwell;
+	return (dwell);
+}
+
+
+function fillDwellRectangle_MarianiSilverSquare(anchor : [number, number], size : [number, number],
+												point_array : Alg2[][], dwell_array : number[][],
+												max_dwell: number, dwell_func : DwellFunction)
+{
+	let unique_dwell : Boolean = true;
+	let base_dwell = handlePoint_MarianiSilver(anchor[0], anchor[1], point_array, dwell_array, max_dwell, dwell_func);
+	let cur_dwell : number;
+	let end_x = anchor[0] + width;
+	let end_y = anchor[1] + height;
+
+	for (let x = anchor[0]; x < end_x; x++)
+	{
+		cur_dwell = handlePoint_MarianiSilver(x, anchor[1],
+												point_array, dwell_array,
+												max_dwell, dwell_func);
+		if (cur_dwell != base_dwell)
+			unique_dwell = false;
+		cur_dwell = handlePoint_MarianiSilver(x, end_y - 1,
+												point_array, dwell_array,
+												max_dwell, dwell_func);
+		if (cur_dwell != base_dwell)
+			unique_dwell = false;
+	}
+	for (let y = anchor[1] + 1; y < end_y - 1; y++)
+	{
+		cur_dwell = handlePoint_MarianiSilver(anchor[0], y,
+												point_array, dwell_array,
+												max_dwell, dwell_func);
+		if (cur_dwell != base_dwell)
+			unique_dwell = false;
+		cur_dwell = handlePoint_MarianiSilver(end_x - 1, y,
+												point_array, dwell_array,
+												max_dwell, dwell_func);
+		if (cur_dwell != base_dwell)
+			unique_dwell = false;
+	}
+	return (unique_dwell ? base_dwell : -1);
+}
+
+function recursion_MarianiSilverSquare(anchor : [number, number], size : [number, number],
+										point_array : Alg2[][], dwell_array : number[][],
+										max_dwell: number, dwell_func : DwellFunction,
+										ms_depth : number, treenode : QuadtreeNode<MarianiSilver_Node>)
+{
+	if (size[0] < 1 || size[1] < 1)
+		return ;
+
+	let test_dwell : number;
+
+	let w_is_odd = size[0] % 2 === 1;
+	let h_is_odd = size[1] % 2 === 1;
+
+	let w_half = size[0] / 2;
+	let h_half = size[1] / 2;
+	let w_mid_anchor : number;
+	let h_mid_anchor : number;
+	let w_even_offset : number;
+	let h_even_offset : number;
+
+	if (w_is_odd)
+	{
+		w_even_offset = 0;
+		w_mid_anchor = anchor[0] + Math.floor(w_half);
+		w_half = Math.ceil(w_half);
+	}
+	else
+	{
+		w_even_offset = 1;
+		w_mid_anchor = anchor[0] + Math.floor(w_half) - w_even_offset;
+	}
+	if (h_is_odd)
+	{
+		h_even_offset = 0;
+		h_mid_anchor = anchor[1] + Math.floor(h_half);
+		h_half = Math.ceil(h_half);
+	}
+	else
+	{
+		h_even_offset = 1;
+		h_mid_anchor = anchor[1] + Math.floor(h_half) - h_even_offset;
+	}
+
+	let anchor_top_l = [anchor[0]	, anchor[1]		];
+	let anchor_top_r = [w_mid_anchor, anchor[1]		];
+	let anchor_bot_l = [anchor[0]	, h_mid_anchor	];
+	let anchor_bot_r = [w_mid_anchor, h_mid_anchor	];
+
+	let size_top_l = [w_half				, h_half				];
+	let size_top_r = [w_half + w_even_offset, h_half				];
+	let size_bot_l = [w_half				, h_half + h_even_offset];
+	let size_bot_r = [w_half + w_even_offset, h_half + h_even_offset];
+
+
+	treenode.build_empty_children();
+
+	//top left
+	test_dwell = fillDwellRectangle_MarianiSilverSquare(anchor_top_l, size_top_l,
+														point_array, dwell_array,
+														max_dwell, dwell_func);
+	if (test_dwell != -1)
+	{
+		treenode.get_top_l().set_data(new MarianiSilver_Node(test_dwell, ms_depth, anchor_top_l, size_top_l));
+	}
+	else
+	{
+		recursion_MarianiSilverSquare(anchor_top_l, size_top_l,
+										point_array, dwell_array,
+										max_dwell, dwell_func,
+										ms_depth + 1, treenode.get_top_l());
+	}
+
+	//top right
+	test_dwell = fillDwellRectangle_MarianiSilverSquare(anchor_top_r, size_top_r,
+														point_array, dwell_array,
+														max_dwell, dwell_func);
+	if (test_dwell != -1)
+	{
+		treenode.get_top_r().set_data(new MarianiSilver_Node(test_dwell, ms_depth, anchor_top_r, size_top_r));
+	}
+	else
+	{
+		recursion_MarianiSilverSquare(anchor_top_r, size_top_r,
+										point_array, dwell_array,
+										max_dwell, dwell_func,
+										ms_depth + 1, treenode.get_top_r());
+	}
+
+	//bottom left
+	test_dwell = fillDwellRectangle_MarianiSilverSquare(anchor_bot_l, size_bot_l,
+														point_array, dwell_array,
+														max_dwell, dwell_func);
+	if (test_dwell != -1)
+	{
+		treenode.get_bot_l().set_data(new MarianiSilver_Node(test_dwell, ms_depth, anchor_bot_l, size_bot_l));
+	}
+	else
+	{
+		recursion_MarianiSilverSquare(anchor_bot_l, size_bot_l,
+										point_array, dwell_array,
+										max_dwell, dwell_func,
+										ms_depth + 1, treenode.get_bot_l());
+	}
+
+	//bottom right
+	test_dwell = fillDwellRectangle_MarianiSilverSquare(anchor_bot_r, size_bot_r,
+														point_array, dwell_array,
+														max_dwell, dwell_func);
+	if (test_dwell != -1)
+	{
+		treenode.get_bot_r().set_data(new MarianiSilver_Node(test_dwell, ms_depth, anchor_bot_r, size_bot_r));
+	}
+	else
+	{
+		recursion_MarianiSilverSquare(anchor_bot_r, size_bot_r,
+										point_array, dwell_array,
+										max_dwell, dwell_func,
+										ms_depth + 1, treenode.get_bot_r());
+	}
+}
+
+function fractalRender_MarianiSilverSquare(width : number, height : number,	span : [Alg2, Alg2],
+											max_dwell : number, dwell_func : DwellFunction)
+{
+	let point_array : Alg2[][] = samplePointsOnPlane(width, height, span);
+	let dwell_array : number[][] = init2DArray(width, height, -1);
+	let result = new Quadtree<MarianiSilver_Node>();
+
+	recursion_MarianiSilverSquare([0,0], width, height, point_array, dwell_array, max_dwell, dwell_func, 0, result.get_root());
+
+	return (result);
+}
+
+
 
 function mandelbrotDwell(max_dwell : number, start: Alg2)
 {

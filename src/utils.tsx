@@ -12,6 +12,39 @@ function bindValue(value : number, min : number, max : number)
     return value;
 }
 
+function init2DArray(width : number, height : number, default_value : T) : T[][]
+{
+	result : T[][];
+
+	result = [];
+	for (let y = 0; y < height; y++)
+	{
+		let line = [];
+		for (let x = 0; x < width; x++)
+		{
+			line.push(default_value);
+		}
+		result.push(color_line);
+	}
+	return (result);
+}
+
+function fill2DArray(width : number, height : number, form : (x:number, y:number) => T) : T[][]
+{
+	result : T[][];
+
+	result = [];
+	for (let y = 0; y < height; y++)
+	{
+		let line = [];
+		for (let x = 0; x < width; x++)
+		{
+			line.push(form(x, y));
+		}
+		result.push(color_line);
+	}
+	return (result);
+}
 
 /*
 ** Needs object argument to pass by reference
@@ -62,4 +95,124 @@ class Color
 
 
 
-export default Color;
+class QuadtreeNode<T>
+{
+    private top_l : QuadtreeNode<T> | null;
+    private top_r : QuadtreeNode<T> | null;
+    private bot_l : QuadtreeNode<T> | null;
+    private bot_r : QuadtreeNode<T> | null;
+    private data : T | null;
+
+    constructor(data : T | null)
+    {
+        this.top_l = null;
+        this.top_r = null;
+        this.bot_l = null;
+        this.bot_r = null;
+        this.data = data;
+    }
+
+    build_empty_children()
+    {
+    	this.top_l = new QuadtreeNode<T>(null);
+		this.top_r = new QuadtreeNode<T>(null);
+		this.bot_l = new QuadtreeNode<T>(null);
+		this.bot_r = new QuadtreeNode<T>(null);	
+    }
+    has_children()
+    {
+    	return (
+    		this.has_top_l() ||
+    		this.has_top_r() ||
+    		this.has_bot_l() ||
+    		this.has_bot_r()	);
+    }
+
+    set_top_l(node : QuadtreeNode<T>)
+    {
+    	this.top_l = node;
+    }
+    get_top_l()
+    {
+    	return (this.top_l);
+    }
+	has_top_l()
+	{
+		return (this.top_l != null);
+	}
+
+    set_top_r(node : QuadtreeNode<T>)
+    {
+    	this.top_r = node;
+    }
+    get_top_r()
+    {
+    	return (this.top_r);
+    }
+    has_top_r()
+	{
+		return (this.top_r != null);
+	}
+
+    set_bot_l(node : QuadtreeNode<T>)
+    {
+    	this.bot_l = node;
+    }
+    get_bot_l()
+    {
+    	return (this.bot_l);
+    }
+    has_bot_l()
+	{
+		return (this.bot_l != null);
+	}
+
+    set_bot_r(node : QuadtreeNode<T>)
+    {
+    	this.bot_r = node;
+    }
+    get_bot_r()
+    {
+    	return (this.bot_r);
+    }
+    has_bot_r()
+	{
+		return (this.bot_r != null);
+	}
+
+    set_data(data : T)
+    {
+    	this.data = data;
+    }
+    get_data()
+    {
+    	return (this.data);
+    }
+    has_data()
+	{
+		return (this.data != null);
+	}
+}
+
+class Quadtree<T>
+{
+	private root : QuadtreeNode<T>;
+
+	constructor()
+	{
+		this.root = new QuadtreeNode(null);
+	}
+	get_root()
+	{
+		return (this.root);
+	}
+/*
+	parse_tree( function(data : T) : T)
+	{
+
+	}
+*/
+}
+
+
+export {Color, QuadtreeNode, Quadtree};

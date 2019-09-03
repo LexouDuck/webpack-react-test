@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {Menu} from "./menu"
+import {Menu} from "./menu";
 import {MandelbrotCanvas, Color} from "./react-canvas";
-import {Complex, SplitComplex, DualNumber} from "./algebra"
+import {Complex, SplitComplex, DualNumber} from "./algebra";
 
 
 
