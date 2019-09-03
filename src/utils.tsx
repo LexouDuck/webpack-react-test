@@ -1,18 +1,20 @@
 
+/*
+** keeps value between 'min' & 'max'
+*/
 function bindValue(value : number, min : number, max : number)
 {
-    if (max < min)
-    {
-        console.log("bindValue: incoherent min and max: undefined behavior");
-    }
+	if (max < min)
+	{
+		console.log("bindValue: incoherent min and max: undefined behavior");
+	}
 
-    if (value < min)
-        return min;
-    if (value > max)
-        return max;
-    return value;
+	if (value < min)
+		return min;
+	if (value > max)
+		return max;
+	return value;
 }
-
 
 /*
 ** Needs object argument to pass by reference
@@ -26,56 +28,7 @@ function swap<T>(pair: {val1 : T, val2 : T})
 	pair.val2 = tmp;
 }
 
-
-
-export class Color
-{
-//    a : number;
-    r : number;
-    g : number;
-    b : number;
-
-    private bindChannel(c : number)
-    {
-        return Math.floor(bindValue(c, 0, 255));
-    }
-
-    private toByteString(c : number)
-    {
-        if (c < 16)
-            return "0" + c.toString(16);
-        return c.toString(16);
-    }
-
-    constructor(/*a : number,*/ r : number, g : number, b : number)
-    {
-        //this.a = this.bindChannel(a); //TODO useless for now
-        this.r = this.bindChannel(r);
-        this.g = this.bindChannel(g);
-        this.b = this.bindChannel(b);
-    }
-
-    getCSS()
-    {
-        return ("#" + this.toByteString(this.r) + this.toByteString(this.g) + this.toByteString(this.b));
-    }
-}
-
-
-
-export function makeGrayscalePalette(max_dwell:number)
-{
-    let result : Color[];
-
-    result = [];
-    for (let i = 0; i < max_dwell; i++)
-    {
-        let lerp_val = (i + 1) * 255 / max_dwell;
-        result.push(new Color(lerp_val, lerp_val, lerp_val));
-    }
-    result.push(new Color(0, 0, 0));
-
-    return (result);
-}
-
-export default Color;
+export {
+	bindValue,
+	swap
+};

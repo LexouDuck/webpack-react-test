@@ -9,7 +9,7 @@ import * as ReactDOM from "react-dom";
 */
 import React from "react";
 import ReactDOM from "react-dom";
-import Color from './utils';
+import {Color} from './color';
 import {Alg2, Complex, SplitComplex, DualNumber, Alg2Class,
 		Poly2, ComplexPoly, SplitComplexPoly, DualNumberPoly,
 		newAlg2, getAlg2_copy} from './algebra';

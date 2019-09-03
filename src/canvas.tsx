@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {samplePointsOnPlane, fractalRender_Simple, dwellArray_to_colorArray, DwellFunction} from './fractals';
 import {Alg2, Complex, SplitComplex, DualNumber} from './algebra'
-import Color from './utils'
+import {Color} from './color'
 
 
 

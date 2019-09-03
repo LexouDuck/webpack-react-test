@@ -4,7 +4,7 @@ import {Menu} from "./menu"
 import {FractalCanvas} from "./canvas";
 import {DwellFunction, mandelbrotDwell} from './fractals';
 import {Complex, SplitComplex, DualNumber} from "./algebra"
-import {Color, makeGrayscalePalette} from "./utils"
+import {Color, makeGrayscalePalette} from "./color"
 
 
 
