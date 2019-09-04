@@ -16,9 +16,9 @@ function bindValue(value : number, min : number, max : number)
 	return value;
 }
 
-function init2DArray(width : number, height : number, default_value : T) : T[][]
+function init2DArray<T>(width : number, height : number, default_value : T) : T[][]
 {
-	result : T[][];
+	let result : T[][];
 
 	result = [];
 	for (let y = 0; y < height; y++)
@@ -28,7 +28,7 @@ function init2DArray(width : number, height : number, default_value : T) : T[][]
 		{
 			line.push(default_value);
 		}
-		result.push(color_line);
+		result.push(line);
 	}
 	return (result);
 }
@@ -36,7 +36,7 @@ function init2DArray(width : number, height : number, default_value : T) : T[][]
 //TODO add currying or this is useless
 function fill2DArray(width : number, height : number, form : (x:number, y:number) => T) : T[][]
 {
-	result : T[][];
+	let result : T[][];
 
 	result = [];
 	for (let y = 0; y < height; y++)
@@ -74,21 +74,24 @@ class QuadtreeNode<T>
     private bot_r : QuadtreeNode<T> | null;
     private data : T | null;
 
-    constructor(data : T | null)
+    constructor()//data : T)
     {
         this.top_l = null;
         this.top_r = null;
         this.bot_l = null;
         this.bot_r = null;
-        this.data = data;
+/*        if (data != null)
+	        this.data = data;
+	    else 
+*/	    	this.data = null;
     }
 
     build_empty_children()
     {
-    	this.top_l = new QuadtreeNode<T>(null);
-		this.top_r = new QuadtreeNode<T>(null);
-		this.bot_l = new QuadtreeNode<T>(null);
-		this.bot_r = new QuadtreeNode<T>(null);	
+    	this.top_l = new QuadtreeNode<T>();//null);
+		this.top_r = new QuadtreeNode<T>();//null);
+		this.bot_l = new QuadtreeNode<T>();//null);
+		this.bot_r = new QuadtreeNode<T>();//null);	
     }
     has_children()
     {
@@ -171,7 +174,7 @@ class Quadtree<T>
 
 	constructor()
 	{
-		this.root = new QuadtreeNode(null);
+		this.root = new QuadtreeNode();
 	}
 	get_root()
 	{

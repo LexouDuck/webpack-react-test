@@ -9,7 +9,7 @@ import * as ReactDOM from "react-dom";
 */
 import React from "react";
 import ReactDOM from "react-dom";
-import {QuadtreeNode, Quadtree} from './utils';
+import {init2DArray, QuadtreeNode, Quadtree} from './utils';
 import {Color} from './color';
 import {Alg2, Complex, SplitComplex, DualNumber, Alg2Class,
 		Poly2, ComplexPoly, SplitComplexPoly, DualNumberPoly,
@@ -114,12 +114,12 @@ class MarianiSilver_Node
 	anchor : [number, number];
 	size : [number, number];
 
-	constructor(dwell : number,	depth : number, anchor : [number, number], size : [number, number])
+	constructor(dwell : number, depth : number, anchor : [number, number], size : [number, number])
 	{
-		dwell = this.dwell;
-		depth = this.depth;
-		anchor = this.anchor; 
-		size = this.size;
+		this.dwell = dwell;
+		this.depth = depth;
+		this.anchor = anchor; 
+		this.size = size;
 	}
 
 	get_dwell()
@@ -137,7 +137,7 @@ class MarianiSilver_Node
 	get_size()
 	{
 		return (this.size);
-	}	
+	}
 }
 
 function handlePoint_MarianiSilver(x: number, y: number,
@@ -163,8 +163,8 @@ function fillDwellRectangle_MarianiSilverSquare(anchor : [number, number], size 
 	let unique_dwell : Boolean = true;
 	let base_dwell = handlePoint_MarianiSilver(anchor[0], anchor[1], point_array, dwell_array, max_dwell, dwell_func);
 	let cur_dwell : number;
-	let end_x = anchor[0] + width;
-	let end_y = anchor[1] + height;
+	let end_x = anchor[0] + size[0];
+	let end_y = anchor[1] + size[1];
 
 	for (let x = anchor[0]; x < end_x; x++)
 	{
@@ -238,15 +238,15 @@ function recursion_MarianiSilverSquare(anchor : [number, number], size : [number
 		h_mid_anchor = anchor[1] + Math.floor(h_half) - h_even_offset;
 	}
 
-	let anchor_top_l = [anchor[0]	, anchor[1]		];
-	let anchor_top_r = [w_mid_anchor, anchor[1]		];
-	let anchor_bot_l = [anchor[0]	, h_mid_anchor	];
-	let anchor_bot_r = [w_mid_anchor, h_mid_anchor	];
+	let anchor_top_l : [number, number] = [anchor[0]	, anchor[1]		];
+	let anchor_top_r : [number, number] = [w_mid_anchor, anchor[1]		];
+	let anchor_bot_l : [number, number] = [anchor[0]	, h_mid_anchor	];
+	let anchor_bot_r : [number, number] = [w_mid_anchor, h_mid_anchor	];
 
-	let size_top_l = [w_half				, h_half				];
-	let size_top_r = [w_half + w_even_offset, h_half				];
-	let size_bot_l = [w_half				, h_half + h_even_offset];
-	let size_bot_r = [w_half + w_even_offset, h_half + h_even_offset];
+	let size_top_l : [number, number] = [w_half					, h_half				];
+	let size_top_r : [number, number] = [w_half + w_even_offset	, h_half				];
+	let size_bot_l : [number, number] = [w_half					, h_half + h_even_offset];
+	let size_bot_r : [number, number] = [w_half + w_even_offset	, h_half + h_even_offset];
 
 
 	treenode.build_empty_children();
@@ -257,14 +257,14 @@ function recursion_MarianiSilverSquare(anchor : [number, number], size : [number
 														max_dwell, dwell_func);
 	if (test_dwell != -1)
 	{
-		treenode.get_top_l().set_data(new MarianiSilver_Node(test_dwell, ms_depth, anchor_top_l, size_top_l));
+		treenode!.get_top_l()!.set_data(new MarianiSilver_Node(test_dwell, ms_depth, anchor_top_l, size_top_l));
 	}
 	else
 	{
 		recursion_MarianiSilverSquare(anchor_top_l, size_top_l,
 										point_array, dwell_array,
 										max_dwell, dwell_func,
-										ms_depth + 1, treenode.get_top_l());
+										ms_depth + 1, treenode!.get_top_l()!);
 	}
 
 	//top right
@@ -273,14 +273,14 @@ function recursion_MarianiSilverSquare(anchor : [number, number], size : [number
 														max_dwell, dwell_func);
 	if (test_dwell != -1)
 	{
-		treenode.get_top_r().set_data(new MarianiSilver_Node(test_dwell, ms_depth, anchor_top_r, size_top_r));
+		treenode!.get_top_r()!.set_data(new MarianiSilver_Node(test_dwell, ms_depth, anchor_top_r, size_top_r));
 	}
 	else
 	{
 		recursion_MarianiSilverSquare(anchor_top_r, size_top_r,
 										point_array, dwell_array,
 										max_dwell, dwell_func,
-										ms_depth + 1, treenode.get_top_r());
+										ms_depth + 1, treenode!.get_top_r()!);
 	}
 
 	//bottom left
@@ -289,14 +289,14 @@ function recursion_MarianiSilverSquare(anchor : [number, number], size : [number
 														max_dwell, dwell_func);
 	if (test_dwell != -1)
 	{
-		treenode.get_bot_l().set_data(new MarianiSilver_Node(test_dwell, ms_depth, anchor_bot_l, size_bot_l));
+		treenode!.get_bot_l()!.set_data(new MarianiSilver_Node(test_dwell, ms_depth, anchor_bot_l, size_bot_l));
 	}
 	else
 	{
 		recursion_MarianiSilverSquare(anchor_bot_l, size_bot_l,
 										point_array, dwell_array,
 										max_dwell, dwell_func,
-										ms_depth + 1, treenode.get_bot_l());
+										ms_depth + 1, treenode!.get_bot_l()!);
 	}
 
 	//bottom right
@@ -305,14 +305,14 @@ function recursion_MarianiSilverSquare(anchor : [number, number], size : [number
 														max_dwell, dwell_func);
 	if (test_dwell != -1)
 	{
-		treenode.get_bot_r().set_data(new MarianiSilver_Node(test_dwell, ms_depth, anchor_bot_r, size_bot_r));
+		treenode!.get_bot_r()!.set_data(new MarianiSilver_Node(test_dwell, ms_depth, anchor_bot_r, size_bot_r));
 	}
 	else
 	{
 		recursion_MarianiSilverSquare(anchor_bot_r, size_bot_r,
 										point_array, dwell_array,
 										max_dwell, dwell_func,
-										ms_depth + 1, treenode.get_bot_r());
+										ms_depth + 1, treenode!.get_bot_r()!);
 	}
 }
 
@@ -323,7 +323,7 @@ function fractalRender_MarianiSilverSquare(width : number, height : number,	span
 	let dwell_array : number[][] = init2DArray(width, height, -1);
 	let result = new Quadtree<MarianiSilver_Node>();
 
-	recursion_MarianiSilverSquare([0,0], width, height, point_array, dwell_array, max_dwell, dwell_func, 0, result.get_root());
+	recursion_MarianiSilverSquare([0,0], [width, height], point_array, dwell_array, max_dwell, dwell_func, 0, result!.get_root()!);
 
 	return (result);
 }
