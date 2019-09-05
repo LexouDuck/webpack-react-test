@@ -109,10 +109,10 @@ function dwellArray_to_colorArray(width : number, height : number, dwell_arr : n
 
 class MarianiSilver_Node 
 {
-	dwell : number;
-	depth : number;
-	anchor : [number, number];
-	size : [number, number];
+	private dwell : number;
+	private depth : number;
+	private anchor : [number, number];
+	private size : [number, number];
 
 	constructor(dwell : number, depth : number, anchor : [number, number], size : [number, number])
 	{
@@ -200,7 +200,7 @@ function recursion_MarianiSilverSquare(anchor : [number, number], size : [number
 										max_dwell: number, dwell_func : DwellFunction,
 										ms_depth : number, treenode : QuadtreeNode<MarianiSilver_Node>)
 {
-	if (size[0] < 1 || size[1] < 1)
+	if (size[0] <= 2 || size[1] <= 2)
 		return ;
 
 	let test_dwell : number;
@@ -317,7 +317,7 @@ function recursion_MarianiSilverSquare(anchor : [number, number], size : [number
 }
 
 function fractalRender_MarianiSilverSquare(width : number, height : number,	span : [Alg2, Alg2],
-											max_dwell : number, dwell_func : DwellFunction)
+											max_dwell : number, dwell_func : DwellFunction) : Quadtree<MarianiSilver_Node>
 {
 	let point_array : Alg2[][] = samplePointsOnPlane(width, height, span);
 	let dwell_array : number[][] = init2DArray(width, height, -1);
@@ -348,5 +348,6 @@ function mandelbrotDwell(max_dwell : number, start: Alg2)
 }
 
 export {samplePointsOnPlane, fractalRender_Simple, dwellArray_to_colorArray,
-		mandelbrotDwell};
+		mandelbrotDwell,
+		fractalRender_MarianiSilverSquare};
 
