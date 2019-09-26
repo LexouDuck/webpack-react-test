@@ -2,7 +2,8 @@
 	"name": "test",
 	"version": "0.1.0",
 	"private": true,
-	"dependencies": {
+	"dependencies":
+	{
 		"@types/jest": "24.0.16",
 		"@types/node": "12.6.8",
 		"@types/react": "16.8.24",
@@ -12,29 +13,35 @@
 		"react-scripts": "3.0.1",
 		"typescript": "3.5.3"
 	},
-	"scripts": {
+	"scripts":
+	{
 		"start": "react-scripts start",
 		"stop": "taskkill -F -IM node.exe",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
 	},
-	"eslintConfig": {
+	"eslintConfig":
+	{
 		"extends": "react-app"
 	},
-	"browserslist": {
-		"production": [
+	"browserslist":
+	{
+		"production":
+		[
 			">0.2%",
 			"not dead",
 			"not op_mini all"
 		],
-		"development": [
+		"development":
+		[
 			"last 1 chrome version",
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
 	},
-	"devDependencies": {
+	"devDependencies":
+	{
 		"webpack-cli": "^3.3.7"
 	}
 }
