@@ -174,18 +174,47 @@ class Quadtree<T>
 
 	constructor()
 	{
-		this.root = new QuadtreeNode();
+		this.root = new QuadtreeNode<T>();
 	}
 	get_root()
 	{
 		return (this.root);
 	}
-/*
-	parse_tree( function(data : T) : T)
-	{
 
+	private parse_node_recursion(node : QuadtreeNode<T>, result : T[]) : void
+	{
+		if (node.has_data())
+		{
+			result.push(node.get_data()!);
+			return ;
+		}
+
+		if (node.has_top_l())
+		{
+			this.parse_node_recursion(node.get_top_l()!, result);
+		}
+		if (node.has_top_r())
+		{
+			this.parse_node_recursion(node.get_top_r()!, result);
+		}
+		if (node.has_bot_l())
+		{
+			this.parse_node_recursion(node.get_bot_l()!, result);
+		}
+		if (node.has_bot_r())
+		{
+			this.parse_node_recursion(node.get_bot_r()!, result);
+		}
 	}
-*/
+
+	parse_tree() : T[]// function(data : T) => T)
+	{
+		let result : T[] = [];
+
+		this.parse_node_recursion(this.root, result);
+
+		return (result);
+	}
 }
 
 
