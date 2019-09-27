@@ -8,14 +8,16 @@ Notes on packages and whatnot for HTML, CSS, React, JS, TypeScript
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-</style>
-</head>
 
-<body>
-<h1 >My Home Page</h1>
-</body>
+	<head>
+		<meta charset="utf-8" />
+		<title>My Home Page</title>
+	</head>
+
+	<body>
+		<h1 >Welcome to my website</h1>
+		<p>Lorem Ipsum dolor sit amet</p>
+	</body>
 
 </html> 
 ```
@@ -24,35 +26,41 @@ Notes on packages and whatnot for HTML, CSS, React, JS, TypeScript
 
 ### 1) List of HTML tags and attributes
 
-Syntax:
+_General Syntax_:
 ```html
-	<tag attr1="" attr2="" ... >AFFECTED TEXT/ELEMENT</tag>		(for a container tag)
-	<tag attr1="" attr2="" ... />								(for a standalone tag, such as a ReactJS component, or <br/>)
+<tag attr1="" attr2="" ... >CONTENT</tag>
 ```
+For a container tag, eg. an HTML tag which holds content inside it (content ban be text, other HTML tags, etc)
+```html
+<tag attr1="" attr2="" ... />
+```
+(for a standalone tag, such as a ReactJS component, or <br/>)
+
+_Heading tags_:
 
 ```html
-<html lang="en-US">
+<html lang="en-US">WEBPAGE CONTENT</html>
 ```
-Specifies language and encoding for the browser
+Usually encloses the entire HTML file (except for the `<!DOCTYPE html>` preceding it). Specifies language and encoding for the browser to interpret
 
 ```html
-<head>
+<head></head>
 ```
 Where all page metadata (HTML preprocessor info) elements are kept, this includes `<style>`, `<script>`, `<title>`, tags/keywords for bots, character encoding (`<meta charset="">`), icon (see favicon.ico), browser compatibility information (`<meta http-equiv="" content="">`).
 See more at https://www.w3schools.com/html/html_head.asp
 
 ```html
-<title>
+<title>PAGE TITLE</title>
 ```
 Webpage title (what appears at the top of the browser or in the tab)
 
 ```html
-<style>
+<style>CSS</style>
 ```
 CSS information, whether it be inline, or a call to some external source, see CSS section below
 
 ```html
-<script>
+<script src="...">
 ```
 include an external script, or write one within the tag (can be JavaScript, PHP) (can also be within <body>).
 
@@ -64,8 +72,13 @@ include an external script, or write one within the tag (can be JavaScript, PHP)
 ```html
 <meta ... name="" content="">
 ```
-	Generally used to make responsive web pages (pages that dynamically adapt to the size etc of the platform on which they are viewed), or just generally adapt some of the pages properties and functionalities. <meta charset=""> defines the encoding. <meta name="description" content="my page description"> ; <meta name="keywords" content="search, engine, keyword, list"> ; <meta name="author" content="John Doe">; <meta name="viewport" content="special-syntax-for-what-the-client-views">.
-	<meta http-equiv="refresh" content="30"> => refreshes web page automatically every 30 seconds
+Generally used to make responsive web pages (pages that dynamically adapt to the size etc of the platform on which they are viewed), or just generally adapt some of the pages properties and functionalities.
+- `<meta charset="" />` defines the encoding.
+- `<meta name="description" content="my page description" />`
+- `<meta name="keywords" content="search, engine, keyword, list" />`
+- `<meta name="author" content="John Doe" />`
+- `<meta name="viewport" content="special-syntax-for-what-the-client-views" />`
+- `<meta http-equiv="refresh" content="30" />` => refreshes web page automatically every 30 seconds
 
 ```html
 <link rel="" href="">
@@ -76,6 +89,8 @@ include an external script, or write one within the tag (can be JavaScript, PHP)
 <base href="base_relative_url" target="">
 ```
 	Specifies the base URL and base target for all relative URLs in a page
+
+_Page body tags_:
 
 ```html
 <body>
