@@ -541,7 +541,7 @@
 			"file": "src/canvas.tsx",
 			"settings":
 			{
-				"buffer_size": 1631,
+				"buffer_size": 2312,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -725,9 +725,7 @@
 	},
 	"expanded_folders":
 	[
-		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test",
-		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/public",
-		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/src"
+		"/D/Lexou/Documents/Work/Rodolphocentrisme/test"
 	],
 	"file_history":
 	[
@@ -1243,15 +1241,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1631,
+						"buffer_size": 2312,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								266,
-								266
+								0,
+								0
 							]
 						],
 						"settings":

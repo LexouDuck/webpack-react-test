@@ -1,9 +1,11 @@
-Notes on packages and whatnot for HTML, CSS, React, JS, TypeScript
+General notes on web developement and things to know, regarding packages and whatnot for HTML, CSS, JavaScript, TypeScript, React, GraphQL, Apollo
 
 # HTML
-------
+---
 
 ### 0) HTML basic frame
+
+The bare minimum template
 
 ```html
 <!DOCTYPE html>
@@ -22,16 +24,19 @@ Notes on packages and whatnot for HTML, CSS, React, JS, TypeScript
 </html> 
 ```
 
-
+---
 
 ### 1) List of HTML tags and attributes
 
 _General Syntax_:
+
+---
+
 ```html
 <tag attr1="" attr2="" ... >CONTENT</tag>
 ```
 For a container tag, eg. an HTML tag which holds content inside it (content ban be text, other HTML tags, etc)
----
+
 ```html
 <tag attr1="" attr2="" ... />
 ```
@@ -42,37 +47,44 @@ For a standalone tag, such as a ReactJS component, or `<br/>`
 _Heading tags_:
 
 ---
+
 ```html
 <html lang="en-US">WEBPAGE CONTENT</html>
 ```
 Usually encloses the entire HTML file (except for the `<!DOCTYPE html>` preceding it). Specifies language and encoding for the browser to interpret
----
+
+
 ```html
 <head></head>
 ```
 Where all page metadata (HTML preprocessor info) elements are kept, this includes `<style>`, `<script>`, `<title>`, tags/keywords for bots, character encoding (`<meta charset="">`), icon (see favicon.ico), browser compatibility information (`<meta http-equiv="" content="">`).
 See more at https://www.w3schools.com/html/html_head.asp
----
+
+
 ```html
 <title>PAGE TITLE</title>
 ```
 Webpage title (what appears at the top of the browser or in the tab)
----
+
+
 ```html
 <style>CSS</style>
 ```
 CSS information, whether it be inline, or a call to some external source, see CSS section below
----
+
+
 ```html
 <script src="...">
 ```
 include an external script, or write one within the tag (can be JavaScript, PHP) (can also be within `<body>`).
----
+
+
 ```html
 <noscript>
 ```
 	Used to provide an alternative (such as an error message) for browsers where JavaScript has been disabled.
----
+
+
 ```html
 <meta ... name="" content="">
 ```
@@ -83,13 +95,15 @@ Generally used to make responsive web pages (pages that dynamically adapt to the
 - `<meta name="author" content="John Doe" />`
 - `<meta name="viewport" content="special-syntax-for-what-the-client-views" />`
 - `<meta http-equiv="refresh" content="30" />` => refreshes web page automatically every 30 seconds
----
+
+
 ```html
 <link rel="" href="">
 ```
 	Used to import things such as styles or scripts from permanent mirrors somewhere else on the internet.
 
----
+
+
 ```html
 <base href="base_relative_url" target="">
 ```
@@ -99,30 +113,36 @@ Generally used to make responsive web pages (pages that dynamically adapt to the
 
 _Page body tags_:
 
----
+
+
 ```html
 <body>
 ```
 	Contains the actual content of the webpage
----
+
+
 ```html
 <h1> to <h6>
 ```
 	Text headers in order of decreasing importance. h1 is a chapter, h6 smallest section division within a chapter.
----
+
+
 ```html
 <label id="">
 ```
----
+
+
 ```html
 <button type="" aria-labelledby="" onclick="">
 ```
----
+
+
 ```html
 <a href="">
 ```
 	Creates a hyperlink to address given in href
----
+
+
 ```html
 <b>, <i>, <u>, <s>
 ```
@@ -130,23 +150,27 @@ _Page body tags_:
 	italic (`<em>`, also usable, for the same reasons),
 	underline,
 	strikethrough
----
+
+
 ```html
 <p>
 ```
 	paragraph
----
+
+
 ```html
 <br>
 ```
 	Line break, newline
----
+
+
 ```html
 <ul>, <li>
 ```
 	non-enumerated list
 	list item
----
+
+
 ```html
 <table>, <tr>, <th>, <td>
 ```
@@ -154,17 +178,20 @@ _Page body tags_:
 	creates a table row,
 	creates a table header (element that looks more important than td),
 	creates table data.
----
+
+
 ```html
 <div ...>
 ```
 	defines a section in a document (is "block" level)
----
+
+
 ```html
 <span ...>
 ```
 	defines a section in a document (is "inline" level), is often used as a container for some text
----
+
+
 ```html
 <code>, <kbd>, <samp>, <var>, <pre>
 ```
@@ -173,59 +200,70 @@ _Page body tags_:
 	write text in a font like a terminal output
 	write text in a font like mathematical variables
 	used to align `<code>` text by accepting line returns in the plaintext between `<code>` and `</code>`
----
+
+
 ```html
 <form>
 ```
 	Builds/contains form elements.
----
+
+
 ```html
 <input ...>, <textarea ...>, <select ...>
 ```
 	Used for fields in a form, syntax is specific and deserves more details.
----
+
+
 ```html
 <img src="img.jpg" width="500" height="600" alt="The image contains X."> 
 ```
 	Used to insert an image stored at "img.jpg" with corresponding width and height in pixel
 	NB: alt replaces the image with some text if necessary (used for hovertext or the hearing impaired for example).
----
+
+
 ```html
 <X class="MyClassName">
 ```
 	Using "class" as an attribute allows you to apply anything that applies to said class everywhere it is called.
----
+
+
 ```html
 <X id="MyElemId">
 ```
 	Using "id" as an attribute allows you to apply anything to a specific element. Technically, it is functionally equivalent to using class, but for questions of style, class will apply to a group, while id should be reserved for specific elements. 
----
+
+
 ```html
 <iframe src="URL" height="200" width="300" style="" name="">
 ```
 	allows the embedding of another src, whether that be a webpage or a medium like an image or a video (from an URL, such as a youtube.com/embed/VIDEO_ID).
----
+
+
 ```html
 <audio>
 ```
 	allows embedding of audio such as ogg or mp3. Look here for precise syntax: https://www.w3schools.com/html/html5_audio.asp
----
+
+
 ```html
 <video>
 ```
 	allows embedding of video such as ogg or mp4. Look here for precuse syntax: https://www.w3schools.com/html/html5_video.asp
----
+
+
 ```html
 <object>, <embed>
 ```
 	Allows the embedding of plug-ins, such as Java applets
----
+
+
 ```html
 <canvas>
 ```
 	A container for JavaScript graphics. See more at https://www.w3schools.com/graphics/canvas_intro.asp
 	https://www.html5rocks.com/en/tutorials/canvas/performance/
----
+
+
 ```html
 <svg>
 ```
@@ -277,12 +315,14 @@ Then call the style
 JavaScript can access an element with a specified id by using the getElementById() method.
 
 Use the id attribute to manipulate text with JavaScript:
-	<script>
-		function displayResult()
-		{
-			document.getElementById("myHeader").innerHTML = "Have a nice day!";
-		}
-	</script>
+```html
+<script>
+	function displayResult()
+	{
+		document.getElementById("myHeader").innerHTML = "Have a nice day!";
+	}
+</script>
+```
 
 
 
@@ -291,73 +331,76 @@ Use the id attribute to manipulate text with JavaScript:
 3) Element level 
 
 Block level elements in HTML
-	<address>
-	<article>
-	<aside>
-	<blockquote>
-	<canvas>
-	<dd>
-	<div>
-	<dl>
-	<dt>
-	<fieldset>
-	<figcaption>
-	<figure>
-	<footer>
-	<form>
-	<h1>-<h6>
-	<header>
-	<hr>
-	<li>
-	<main>
-	<nav>
-	<noscript>
-	<ol>
-	<p>
-	<pre>
-	<section>
-	<table>
-	<tfoot>
-	<ul>
-	<video>
+```html
+<address>
+<article>
+<aside>
+<blockquote>
+<canvas>
+<dd>
+<div>
+<dl>
+<dt>
+<fieldset>
+<figcaption>
+<figure>
+<footer>
+<form>
+<h1>-<h6>
+<header>
+<hr>
+<li>
+<main>
+<nav>
+<noscript>
+<ol>
+<p>
+<pre>
+<section>
+<table>
+<tfoot>
+<ul>
+<video>
+```
 
 Inline elements in HTML
-	<a>
-	<abbr>
-	<acronym>
-	<b>
-	<bdo>
-	<big>
-	<br>
-	<button>
-	<cite>
-	<code>
-	<dfn>
-	<em>
-	<i>
-	<img>
-	<input>
-	<kbd>
-	<label>
-	<map>
-	<object>
-	<output>
-	<q>
-	<samp>
-	<script>
-	<select>
-	<small>
-	<span>
-	<strong>
-	<sub>
-	<sup>
-	<textarea>
-	<time>
-	<tt>
-	<var>
+```html
+<a>
+<abbr>
+<acronym>
+<b>
+<bdo>
+<big>
+<br>
+<button>
+<cite>
+<code>
+<dfn>
+<em>
+<i>
+<img>
+<input>
+<kbd>
+<label>
+<map>
+<object>
+<output>
+<q>
+<samp>
+<script>
+<select>
+<small>
+<span>
+<strong>
+<sub>
+<sup>
+<textarea>
+<time>
+<tt>
+<var>
+```
 
-
-
+---
 
 
 4) CSS (Cascading Style Sheets, lol wtf kinda name is that)
@@ -930,8 +973,11 @@ https://reactjs.org/docs/portals.html
 https://reactjs.org/docs/reconciliation.html
 	=> explains in detail the tree-diffing/page updating algorithm
 
+https://medium.com/@martin_hotell/10-typescript-pro-tips-patterns-with-or-without-react-5799488d6680
+-> in particular,  lookup types:
+doing Class['fieldName'] compiles to: 
 
-
+https://templecoding.com/blog/2016/03/31/creating-typescript-typings-for-existing-react-components
 
 
 15) React Native
@@ -1328,5 +1374,9 @@ https://learnxinyminutes.com/docs/angularjs/
 
 GraphQL with React: using Apollo
 
+https://www.apollographql.com/docs/react/data/queries/
 
 https://graphqlmastery.com/blog/react-hooks-in-apollo-client-for-graphql-queries-and-mutations
+
+https://www.howtographql.com/react-apollo/6-more-mutations-and-updating-the-store/
+
