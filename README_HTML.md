@@ -3,9 +3,27 @@
 
 
 
-### 0) HTML basic frame
+### General Syntax
 
-The bare minimum template
+https://learnxinyminutes.com/docs/html/
+
+There are essentially two kinds of syntax for HTML tags/elements:
+
+```html
+<tag attr1="" attr2="" ... >CONTENT</tag>
+```
+For a container tag, eg. an HTML tag which holds content inside it (content ban be text, other HTML tags, etc)
+
+```html
+<tag attr1="" attr2="" ... />
+```
+For a standalone tag, such as a ReactJS component, or `<br/>`
+
+---
+
+### Basic Template
+
+Here is a bare-bones minimal template of what a typical HTML file looks like:
 
 ```html
 <!DOCTYPE html>
@@ -26,27 +44,11 @@ The bare minimum template
 
 ---
 
-### 1) List of HTML tags and attributes
-
-_General Syntax_:
+### List of HTML tags and attributes
 
 ---
 
-```html
-<tag attr1="" attr2="" ... >CONTENT</tag>
-```
-For a container tag, eg. an HTML tag which holds content inside it (content ban be text, other HTML tags, etc)
-
-```html
-<tag attr1="" attr2="" ... />
-```
-For a standalone tag, such as a ReactJS component, or `<br/>`
-
----
-
-_Heading tags_:
-
----
+##### _Heading tags_:
 
 ```html
 <html lang="en-US">WEBPAGE CONTENT</html>
@@ -88,12 +90,13 @@ include an external script, or write one within the tag (can be JavaScript, PHP)
 ```html
 <meta ... name="" content="">
 ```
-Generally used to make responsive web pages (pages that dynamically adapt to the size etc of the platform on which they are viewed), or just generally adapt some of the pages properties and functionalities.
-- `<meta charset="" />` defines the encoding.
+Metadata tags, generally used to make responsive web pages (pages that dynamically adapt to the size etc of the platform on which they are viewed), or just generally adapt some of the pages properties and functionalities.
+- `<meta charset="utf-8" />` defines the type of text encoding (in this example, UTF-8)
+- `<meta name="viewport" content="special-syntax-for-what-the-client-views" />`
+- `<meta name="title" content="John Doe" />`
+- `<meta name="author" content="John Doe" />`
 - `<meta name="description" content="my page description" />`
 - `<meta name="keywords" content="search, engine, keyword, list" />`
-- `<meta name="author" content="John Doe" />`
-- `<meta name="viewport" content="special-syntax-for-what-the-client-views" />`
 - `<meta http-equiv="refresh" content="30" />` => refreshes web page automatically every 30 seconds
 
 
@@ -111,186 +114,192 @@ Generally used to make responsive web pages (pages that dynamically adapt to the
 
 ---
 
-_Page body tags_:
-
-
+##### _Page body tags_:
 
 ```html
 <body>
 ```
-	Contains the actual content of the webpage
+Contains the actual content of the webpage
 
 
 ```html
 <h1> to <h6>
 ```
-	Text headers in order of decreasing importance. h1 is a chapter, h6 smallest section division within a chapter.
-
-
-```html
-<label id="">
-```
-
-
-```html
-<button type="" aria-labelledby="" onclick="">
-```
-
-
-```html
-<a href="">
-```
-	Creates a hyperlink to address given in href
-
-
-```html
-<b>, <i>, <u>, <s>
-```
-	Bold (`<strong>` can also be used for better/more customisable style such as voice software reading webpages),
-	italic (`<em>`, also usable, for the same reasons),
-	underline,
-	strikethrough
+Text headers in order of decreasing importance. h1 is a chapter, h6 smallest section division within a chapter.
 
 
 ```html
 <p>
 ```
-	paragraph
+Paragraph
 
 
 ```html
-<br>
+<b>, <i>, <u>, <s>
 ```
-	Line break, newline
+Bold (`<strong>` can also be used for better/more customisable style such as voice software reading webpages),
+Italic (`<em>`, also usable, for the same reasons),
+Underline,
+Strikethrough
+
+
+```html
+<br/>
+```
+Line break, newline
+
+
+```html
+<hr/>
+```
+Horizontal separation line
 
 
 ```html
 <ul>, <li>
 ```
-	non-enumerated list
-	list item
+Non-enumerated list
+List item
 
 
 ```html
-<table>, <tr>, <th>, <td>
+<a href="https://www.google.com">hypertext link</a>
 ```
-	creates a table,
-	creates a table row,
-	creates a table header (element that looks more important than td),
-	creates table data.
+Creates a hyperlink to address given in href (can be a URL, or an id of another HTML element)
 
 
 ```html
 <div ...>
 ```
-	defines a section in a document (is "block" level)
+Defines a section in a document (is "block" level)
 
 
 ```html
 <span ...>
 ```
-	defines a section in a document (is "inline" level), is often used as a container for some text
+Defines a section in a document (is "inline" level), is often used as a container for styling a particular section of some text
+
+
+```html
+<table>, <tr>, <th>, <td>
+```
+Creates a table,
+Creates a table row,
+Creates a table header (element that looks more important than td),
+Creates table data.
 
 
 ```html
 <code>, <kbd>, <samp>, <var>, <pre>
 ```
-	write text in a font like raw code snippets on the web
-	write text in a font like keyboard keys, to represent user input
-	write text in a font like a terminal output
-	write text in a font like mathematical variables
-	used to align `<code>` text by accepting line returns in the plaintext between `<code>` and `</code>`
+Write text in a font like raw code snippets on the web
+Write text in a font like keyboard keys, to represent user input
+Write text in a font like a terminal output
+Write text in a font like mathematical variables
+Used to align `<code>` text by accepting line returns in the plaintext between `<code>` and `</code>`
+
+
+```html
+<label id="">
+```
+A label
+
+
+```html
+<button type="" onClick="" />
+```
+A clickable button (has a default style which depends on the browser and the OS used - it can be styled manually with CSS)
 
 
 ```html
 <form>
 ```
-	Builds/contains form elements.
+Builds/contains form elements.
 
 
 ```html
 <input ...>, <textarea ...>, <select ...>
 ```
-	Used for fields in a form, syntax is specific and deserves more details.
+Used for fields in a form, syntax is specific and deserves more details.
 
 
 ```html
-<img src="img.jpg" width="500" height="600" alt="The image contains X."> 
+<img src="img.jpg" alt="The image contains X." width="500" height="600" /> 
 ```
-	Used to insert an image stored at "img.jpg" with corresponding width and height in pixel
-	NB: alt replaces the image with some text if necessary (used for hovertext or the hearing impaired for example).
+Used to insert an image, the `alt` attribute is the alternate text to show up if the image doesn't load for whichever reason.
+Optionally, you may also set the desired image width and height dimensions in pixels
+NB: alt replaces the image with some text if necessary (used for hovertext or the hearing impaired for example).
 
 
 ```html
 <X class="MyClassName">
 ```
-	Using "class" as an attribute allows you to apply anything that applies to said class everywhere it is called.
+Using "class" as an attribute allows you to apply anything that applies to said class everywhere it is called.
 
 
 ```html
 <X id="MyElemId">
 ```
-	Using "id" as an attribute allows you to apply anything to a specific element. Technically, it is functionally equivalent to using class, but for questions of style, class will apply to a group, while id should be reserved for specific elements. 
+Using "id" as an attribute allows you to apply anything to a specific element. Technically, it is functionally equivalent to using class, but for questions of style, class will apply to a group, while id should be reserved for specific elements. 
 
 
 ```html
 <iframe src="URL" height="200" width="300" style="" name="">
 ```
-	allows the embedding of another src, whether that be a webpage or a medium like an image or a video (from an URL, such as a youtube.com/embed/VIDEO_ID).
+Allows the embedding of another src, whether that be a webpage or a medium like an image or a video (from an URL, such as a youtube.com/embed/VIDEO_ID).
 
 
 ```html
 <audio>
 ```
-	allows embedding of audio such as ogg or mp3. Look here for precise syntax: https://www.w3schools.com/html/html5_audio.asp
+Allows embedding of audio such as ogg or mp3. Look here for precise syntax: https://www.w3schools.com/html/html5_audio.asp
 
 
 ```html
 <video>
 ```
-	allows embedding of video such as ogg or mp4. Look here for precuse syntax: https://www.w3schools.com/html/html5_video.asp
+Allows embedding of video such as ogg or mp4. Look here for precuse syntax: https://www.w3schools.com/html/html5_video.asp
 
 
 ```html
 <object>, <embed>
 ```
-	Allows the embedding of plug-ins, such as Java applets
+Allows the embedding of plug-ins, such as Java applets
 
 
 ```html
 <canvas>
 ```
-	A container for JavaScript graphics. See more at https://www.w3schools.com/graphics/canvas_intro.asp
-	https://www.html5rocks.com/en/tutorials/canvas/performance/
+A container for JavaScript graphics. See more at https://www.w3schools.com/graphics/canvas_intro.asp
+https://www.html5rocks.com/en/tutorials/canvas/performance/
 
 
 ```html
 <svg>
 ```
-	A container for Scalable Vector Graphics. See more at https://www.w3schools.com/graphics/svg_intro.asp
+A container for Scalable Vector Graphics. See more at https://www.w3schools.com/graphics/svg_intro.asp
 
 
 
 ---
 
-
-
-6) Character entities/ Escape sequences
+### Character entities/ Escape sequences
 
 In HTML one writes special sequences because of the syntactic role of some elements.
-	`&lt;` for `<`
-	`&gt;` for `>`
-	`&nbsp;` is a non-breaking space (a space which cannot be used to jump a line)
-	`&amp;` is an ampersand `&`
-	`&copy;` for a copyright symbol
+- `&lt;` for `<`
+- `&gt;` for `>`
+- `&nbsp;` is a non-breaking space (a space which cannot be used to jump a line)
+- `&amp;` is an ampersand `&`
+- `&copy;` for a copyright symbol
 https://www.w3schools.com/html/html_entities.asp
 https://www.w3schools.com/html/html_symbols.asp
 
 
 
+---
 
+### HTML Forms
 
-7) HTML Forms
 https://www.w3schools.com/html/html_forms.asp
 https://www.w3schools.com/html/html_form_elements.asp
 https://www.w3schools.com/html/html_form_input_types.asp
@@ -298,9 +307,9 @@ https://www.w3schools.com/html/html_form_attributes.asp
 
 
 
+---
 
-
-8) HTML Layouts
+### HTML Layouts
 
 https://www.w3schools.com/html/html_layout.asp
 In a nutshell, the reason why Bootstrap and all these JS frameworks like Angular and React were invented. Making a layout in pure HTML is a bitch, and don't even hope to make it interactive.

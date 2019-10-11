@@ -1,4 +1,4 @@
-# GraphQL
+# GraphQL (a Query Language with simple-to-define types, which generates documentation itself)
 ---
 
 

@@ -1,4 +1,4 @@
-# React
+# React (a framework for generating HTML that optimally updates itself)
 ---
 
 

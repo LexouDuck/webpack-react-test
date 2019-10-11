@@ -1,4 +1,4 @@
-# TypeScript (Javascript, with static types)
+# TypeScript (like Javascript, but with types)
 ---
 
 

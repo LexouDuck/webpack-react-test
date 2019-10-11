@@ -13,28 +13,30 @@ General notes on web developement and things to know, regarding packages and wha
 
 ---
 
-### Setting up React/Typescript/Node/Webpack
+# Setting up React/Typescript/Node/Webpack
 
 https://github.com/Microsoft/TypeScript-React-Starter#typescript-react-starter
 https://webpack.js.org/
 
-##### Prerequisite: Node.js
-
-Mac:
+Prerequisite: Node.js
 ---
+
+##### Mac:
+
 ```sh
 $ brew install npm
 $ npm install
 $ npm install webpack -g
 ```
 
-Windows:
----
+##### Windows:
+
 Install Node.js from the official website: https://nodejs.org/en/
 
 ---
 
-##### 2) Creating the project
+Creating the project
+---
 
 To setup a new React project with typescript:
 

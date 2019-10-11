@@ -1,24 +1,42 @@
-# CSS (Cascading Style Sheets)
+# CSS (Cascading Style Sheets) and SASS/SCSS
 ---
 
 
 
+### General Syntax
+
 https://learnxinyminutes.com/docs/css/
 https://learnxinyminutes.com/docs/sass/
 
-The basic CSS syntax is 
+The basic CSS syntax is like such:
+```css
 	selector_str_name { property: value; property2: value2; ... }
+```
 
 CSS can be added to HTML elements in 3 ways:
+- Inline - by using the style attribute in HTML elements
+- Internal - by using a <style> element in the <head> section
+- External - by using an external CSS file
 
-    Inline - by using the style attribute in HTML elements
-    Internal - by using a <style> element in the <head> section
-    External - by using an external CSS file
+##### Examples:
 
-    Examples:
-    	 - Inline:		<h1 style="color:blue;">This is a Blue Heading</h1> 
-    	 - Internal:	<head><style>h1 {color:blue;}</style></head> ... <h1>this is now blue</h1>
-    	 - External:	<head><link rel="stylesheet" href="styles.css"></head> .... with stylesheet containing the appropriate CSS wished for the various element, in the syntax "h1 {color:blue; font-family:verdana;}"
+Inline:
+
+```html
+	<h1 style="color:blue;">This is a Blue Heading</h1> 
+```
+
+Internal:
+
+```html
+	<head><style>h1 {color:blue;}</style></head> ... <h1>this is now blue</h1>
+```
+
+External:
+
+```html
+	<head><link rel="stylesheet" href="styles.css"></head> .... with stylesheet containing the appropriate CSS wished for the various element, in the syntax "h1 {color:blue; font-family:verdana;}"
+```
 
 
 To define a specific style for one special element, add an id attribute to the element:
