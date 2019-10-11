@@ -44,17 +44,22 @@ Here is a bare-bones minimal template of what a typical HTML file looks like:
 
 ---
 
-### List of HTML tags and attributes
+# List of HTML tags and attributes
+
+This list not exhaustive nor comprehensive, just meant to be a quick recap of the important elements and attributes:
 
 ---
 
-##### _Heading tags_:
+### _Heading tags_:
+
+---
 
 ```html
 <html lang="en-US">WEBPAGE CONTENT</html>
 ```
 Usually encloses the entire HTML file (except for the `<!DOCTYPE html>` preceding it). Specifies language and encoding for the browser to interpret
 
+---
 
 ```html
 <head></head>
@@ -62,30 +67,35 @@ Usually encloses the entire HTML file (except for the `<!DOCTYPE html>` precedin
 Where all page metadata (HTML preprocessor info) elements are kept, this includes `<style>`, `<script>`, `<title>`, tags/keywords for bots, character encoding (`<meta charset="">`), icon (see favicon.ico), browser compatibility information (`<meta http-equiv="" content="">`).
 See more at https://www.w3schools.com/html/html_head.asp
 
+---
 
 ```html
 <title>PAGE TITLE</title>
 ```
 Webpage title (what appears at the top of the browser or in the tab)
 
+---
 
 ```html
 <style>CSS</style>
 ```
 CSS information, whether it be inline, or a call to some external source, see CSS section below
 
+---
 
 ```html
 <script src="...">
 ```
 include an external script, or write one within the tag (can be JavaScript, PHP) (can also be within `<body>`).
 
+---
 
 ```html
 <noscript>
 ```
 	Used to provide an alternative (such as an error message) for browsers where JavaScript has been disabled.
 
+---
 
 ```html
 <meta ... name="" content="">
@@ -99,13 +109,14 @@ Metadata tags, generally used to make responsive web pages (pages that dynamical
 - `<meta name="keywords" content="search, engine, keyword, list" />`
 - `<meta http-equiv="refresh" content="30" />` => refreshes web page automatically every 30 seconds
 
+---
 
 ```html
 <link rel="" href="">
 ```
 	Used to import things such as styles or scripts from permanent mirrors somewhere else on the internet.
 
-
+---
 
 ```html
 <base href="base_relative_url" target="">
@@ -114,25 +125,30 @@ Metadata tags, generally used to make responsive web pages (pages that dynamical
 
 ---
 
-##### _Page body tags_:
+### _Page body tags_:
+
+---
 
 ```html
 <body>
 ```
 Contains the actual content of the webpage
 
+---
 
 ```html
 <h1> to <h6>
 ```
 Text headers in order of decreasing importance. h1 is a chapter, h6 smallest section division within a chapter.
 
+---
 
 ```html
 <p>
 ```
 Paragraph
 
+---
 
 ```html
 <b>, <i>, <u>, <s>
@@ -142,18 +158,21 @@ Italic (`<em>`, also usable, for the same reasons),
 Underline,
 Strikethrough
 
+---
 
 ```html
 <br/>
 ```
 Line break, newline
 
+---
 
 ```html
 <hr/>
 ```
 Horizontal separation line
 
+---
 
 ```html
 <ul>, <li>
@@ -161,24 +180,28 @@ Horizontal separation line
 Non-enumerated list
 List item
 
+---
 
 ```html
 <a href="https://www.google.com">hypertext link</a>
 ```
 Creates a hyperlink to address given in href (can be a URL, or an id of another HTML element)
 
+---
 
 ```html
 <div ...>
 ```
 Defines a section in a document (is "block" level)
 
+---
 
 ```html
 <span ...>
 ```
 Defines a section in a document (is "inline" level), is often used as a container for styling a particular section of some text
 
+---
 
 ```html
 <table>, <tr>, <th>, <td>
@@ -188,6 +211,7 @@ Creates a table row,
 Creates a table header (element that looks more important than td),
 Creates table data.
 
+---
 
 ```html
 <code>, <kbd>, <samp>, <var>, <pre>
@@ -198,30 +222,35 @@ Write text in a font like a terminal output
 Write text in a font like mathematical variables
 Used to align `<code>` text by accepting line returns in the plaintext between `<code>` and `</code>`
 
+---
 
 ```html
 <label id="">
 ```
 A label
 
+---
 
 ```html
 <button type="" onClick="" />
 ```
 A clickable button (has a default style which depends on the browser and the OS used - it can be styled manually with CSS)
 
+---
 
 ```html
 <form>
 ```
 Builds/contains form elements.
 
+---
 
 ```html
 <input ...>, <textarea ...>, <select ...>
 ```
 Used for fields in a form, syntax is specific and deserves more details.
 
+---
 
 ```html
 <img src="img.jpg" alt="The image contains X." width="500" height="600" /> 
@@ -230,42 +259,49 @@ Used to insert an image, the `alt` attribute is the alternate text to show up if
 Optionally, you may also set the desired image width and height dimensions in pixels
 NB: alt replaces the image with some text if necessary (used for hovertext or the hearing impaired for example).
 
+---
 
 ```html
 <X class="MyClassName">
 ```
 Using "class" as an attribute allows you to apply anything that applies to said class everywhere it is called.
 
+---
 
 ```html
 <X id="MyElemId">
 ```
 Using "id" as an attribute allows you to apply anything to a specific element. Technically, it is functionally equivalent to using class, but for questions of style, class will apply to a group, while id should be reserved for specific elements. 
 
+---
 
 ```html
 <iframe src="URL" height="200" width="300" style="" name="">
 ```
 Allows the embedding of another src, whether that be a webpage or a medium like an image or a video (from an URL, such as a youtube.com/embed/VIDEO_ID).
 
+---
 
 ```html
 <audio>
 ```
 Allows embedding of audio such as ogg or mp3. Look here for precise syntax: https://www.w3schools.com/html/html5_audio.asp
 
+---
 
 ```html
 <video>
 ```
 Allows embedding of video such as ogg or mp4. Look here for precuse syntax: https://www.w3schools.com/html/html5_video.asp
 
+---
 
 ```html
 <object>, <embed>
 ```
 Allows the embedding of plug-ins, such as Java applets
 
+---
 
 ```html
 <canvas>
@@ -273,13 +309,14 @@ Allows the embedding of plug-ins, such as Java applets
 A container for JavaScript graphics. See more at https://www.w3schools.com/graphics/canvas_intro.asp
 https://www.html5rocks.com/en/tutorials/canvas/performance/
 
+---
 
 ```html
 <svg>
 ```
 A container for Scalable Vector Graphics. See more at https://www.w3schools.com/graphics/svg_intro.asp
 
-
+---
 
 ---
 
@@ -294,8 +331,6 @@ In HTML one writes special sequences because of the syntactic role of some eleme
 https://www.w3schools.com/html/html_entities.asp
 https://www.w3schools.com/html/html_symbols.asp
 
-
-
 ---
 
 ### HTML Forms
@@ -304,8 +339,6 @@ https://www.w3schools.com/html/html_forms.asp
 https://www.w3schools.com/html/html_form_elements.asp
 https://www.w3schools.com/html/html_form_input_types.asp
 https://www.w3schools.com/html/html_form_attributes.asp
-
-
 
 ---
 
