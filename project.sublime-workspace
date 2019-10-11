@@ -517,53 +517,6 @@
 			]
 		]
 	},
-	"buffers":
-	[
-		{
-			"file": "src/main.tsx",
-			"settings":
-			{
-				"buffer_size": 1388,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/menu.tsx",
-			"settings":
-			{
-				"buffer_size": 3041,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/canvas.tsx",
-			"settings":
-			{
-				"buffer_size": 2312,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/color.tsx",
-			"settings":
-			{
-				"buffer_size": 989,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/algebra.ts",
-			"settings":
-			{
-				"buffer_size": 6756,
-				"line_ending": "Unix"
-			}
-		}
-	],
 	"build_system": "",
 	"build_system_choices":
 	[
@@ -723,12 +676,13 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/D/Lexou/Documents/Work/Rodolphocentrisme/test"
-	],
 	"file_history":
 	[
+		"/D/Lexou/Documents/Work/Rodolphocentrisme/test/src/algebra.ts",
+		"/D/Lexou/Documents/Work/Rodolphocentrisme/test/src/color.tsx",
+		"/D/Lexou/Documents/Work/Rodolphocentrisme/test/src/canvas.tsx",
+		"/D/Lexou/Documents/Work/Rodolphocentrisme/test/src/menu.tsx",
+		"/D/Lexou/Documents/Work/Rodolphocentrisme/test/src/main.tsx",
 		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/package.json",
 		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/test/src/App.tsx",
 		"/D/Lexou/Documents/Work Stuff/Rodolphocentrisme/portal/src/App.js",
@@ -851,12 +805,7 @@
 		"/D/Lexou/Projects/Castlevania/C/src/assets_macos.h",
 		"/D/Lexou/Projects/Castlevania/C/src/config.c",
 		"/D/Lexou/Projects/Castlevania/C/src/config_ini.c",
-		"/D/Lexou/Projects/Castlevania/C/src/player/spells.h",
-		"/D/Lexou/Projects/Castlevania/C/src/stage/room.c",
-		"/D/Lexou/Projects/Castlevania/C/src/menu/render_debug.c",
-		"/D/Lexou/Projects/Castlevania/C/src/engine/inputsequence.h",
-		"/D/Lexou/Projects/Castlevania/C/src/engine/collide.h",
-		"/D/Lexou/Projects/Castlevania/C/src/engine/camera.h"
+		"/D/Lexou/Projects/Castlevania/C/src/player/spells.h"
 	],
 	"find":
 	{
@@ -1154,206 +1103,6 @@
 		"whole_word": false,
 		"wrap": true
 	},
-	"groups":
-	[
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 0,
-					"file": "src/main.tsx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1388,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								301,
-								301
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/TypeScript/TypeScriptReact.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": false,
-								"indentSize": 4,
-								"tabSize": 4
-							},
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 39.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/menu.tsx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3041,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2895,
-								2895
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/TypeScript/TypeScriptReact.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": false,
-								"indentSize": 4,
-								"tabSize": 4
-							},
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/canvas.tsx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2312,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/TypeScript/TypeScriptReact.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": false,
-								"indentSize": 4,
-								"tabSize": 4
-							},
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/color.tsx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 989,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								695,
-								695
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/TypeScript/TypeScriptReact.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": false,
-								"indentSize": 4,
-								"tabSize": 4
-							},
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/algebra.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6756,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5904,
-								5904
-							]
-						],
-						"settings":
-						{
-							"auto_complete": true,
-							"extensions":
-							[
-								"ts"
-							],
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": false,
-								"indentSize": 4,
-								"tabSize": 4
-							},
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3737.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				}
-			]
-		}
-	],
 	"incremental_find":
 	{
 		"height": 65.0
@@ -1402,7 +1151,6 @@
 		"height": 90.0
 	},
 	"pinned_build_system": "",
-	"project": "project.sublime-project",
 	"replace":
 	{
 		"height": 70.0
@@ -1435,7 +1183,6 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
 	"settings":
 	{
 	},
