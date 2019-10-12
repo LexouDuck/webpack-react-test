@@ -55,14 +55,18 @@ This list not exhaustive nor comprehensive, just meant to be a quick recap of th
 ---
 
 ```html
-<html lang="en-US">WEBPAGE CONTENT</html>
+<html lang="en-US">
+	...
+</html>
 ```
 Usually encloses the entire HTML file (except for the `<!DOCTYPE html>` preceding it). Specifies language and encoding for the browser to interpret
 
 ---
 
 ```html
-<head></head>
+<head>
+	...
+</head>
 ```
 Where all page metadata (HTML preprocessor info) elements are kept, this includes `<style>`, `<script>`, `<title>`, tags/keywords for bots, character encoding (`<meta charset="">`), icon (see favicon.ico), browser compatibility information (`<meta http-equiv="" content="">`).
 See more at https://www.w3schools.com/html/html_head.asp
@@ -70,58 +74,69 @@ See more at https://www.w3schools.com/html/html_head.asp
 ---
 
 ```html
-<title>PAGE TITLE</title>
+<title>PAGE TITLE | About</title>
 ```
-Webpage title (what appears at the top of the browser or in the tab)
+Webpage title (what appears at the top of the browser or as the tab title)
 
 ---
 
 ```html
-<style>CSS</style>
+<style>/* inline CSS code */</style>
 ```
-CSS information, whether it be inline, or a call to some external source, see CSS section below
+CSS information, whether it be inline, or a call to some external source, see [README_CSS.md](https://github.com/LexouDuck/webpack-react-test/blob/master/README_CSS.md)
 
 ---
 
 ```html
-<script src="...">
+<script type="text/..." src="..."></script>
 ```
-include an external script, or write one within the tag (can be JavaScript, PHP) (can also be within `<body>`).
+Include an external script, or write one within the tag (can be JavaScript, PHP) (can also be within `<body>`).
+[Learn more](https://www.w3schools.com/Tags/tag_script.asp)
 
 ---
 
 ```html
-<noscript>
+<noscript>You must enable Javascript to run this</noscript>
 ```
-	Used to provide an alternative (such as an error message) for browsers where JavaScript has been disabled.
+Used to provide an alternative (such as an error message) for browsers where JavaScript has been disabled.
 
 ---
 
 ```html
-<meta ... name="" content="">
+<meta ... name="" content="" />
 ```
 Metadata tags, generally used to make responsive web pages (pages that dynamically adapt to the size etc of the platform on which they are viewed), or just generally adapt some of the pages properties and functionalities.
-- `<meta charset="utf-8" />` defines the type of text encoding (in this example, UTF-8)
-- `<meta name="viewport" content="special-syntax-for-what-the-client-views" />`
-- `<meta name="title" content="John Doe" />`
-- `<meta name="author" content="John Doe" />`
-- `<meta name="description" content="my page description" />`
-- `<meta name="keywords" content="search, engine, keyword, list" />`
-- `<meta http-equiv="refresh" content="30" />` => refreshes web page automatically every 30 seconds
+```html
+<meta charset="utf-8" /> <!-- defines the type of text encoding (in this example, UTF-8) -->
+<meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- special-syntax-for-what-the-client-views -->
+<meta name="title" content="Website" />
+<meta name="author" content="Company" />
+<meta name="description" content="Website page description" />
+<meta name="keywords" content="search, engine, keyword, list" />
+<meta name="thumbnail" content="https://www.website.com/assets/thumbnail.png" /> The thumbnail is usually a screenshot of the websitè
+<meta property="og:url" content="https://www.website.com" />
+<meta property="og:title" content="Website" />
+<meta property="og:image" content="https://www.website.com/assets/thumbnail.png" />
+<meta property="og:description" content="Website page description" />
+<meta http-equiv="refresh" content="30" /> <!-- refreshes web page automatically every 30 seconds -->
+```
+[Learn more](https://www.w3schools.com/tags/tag_meta.asp)
 
 ---
 
 ```html
-<link rel="" href="">
+<link rel="" href="" />
 ```
-	Used to import things such as styles or scripts from permanent mirrors somewhere else on the internet.
+Used to import things such as styles or scripts from permanent mirrors somewhere else on the internet.
+[Learn more](https://www.w3schools.com/Tags/tag_link.asp)
 
 ---
 
 ```html
-<base href="base_relative_url" target="">
+<base href="http://www.base.url/" target="_blank" />
 ```
-	Specifies the base URL and base target for all relative URLs in a page
+Specifies the base URL and base target for all relative URLs in a page
+[Learn more](https://www.w3schools.com/Tags/tag_base.asp)
 
 ---
 
@@ -131,32 +146,45 @@ Metadata tags, generally used to make responsive web pages (pages that dynamical
 
 ```html
 <body>
+	...
+</body>
 ```
-Contains the actual content of the webpage
+Contains the actual content of the webpage, (usually a bunch of `<div>` tags and text content with `<p>` and `<h1-6>` tags)
 
 ---
 
 ```html
-<h1> to <h6>
+<h1>TITLE</h1>
+<h2>TITLE</h2>
+<h3>TITLE</h3>
+<h4>TITLE</h4>
+<h5>TITLE</h5>
+<h6>TITLE</h6>
 ```
-Text headers in order of decreasing importance. h1 is a chapter, h6 smallest section division within a chapter.
+Text headers in order of decreasing importance.
+
+You may style these however you wish in your CSS, but traditionally: h1 is largest, h6 is the smallest kind of sub-section title.
 
 ---
 
 ```html
-<p>
+<p>text</p>
 ```
-Paragraph
+Paragraph of text
 
 ---
 
 ```html
-<b>, <i>, <u>, <s>
+<b>bold text</b>
+<i>italic text</i>
+<u>underlined text</u>
+<s>strikethrough text</s>
 ```
-Bold (`<strong>` can also be used for better/more customisable style such as voice software reading webpages),
-Italic (`<em>`, also usable, for the same reasons),
-Underline,
-Strikethrough
+- **Bold text** (`<strong>` can also be used for better/more customisable style such as voice software reading webpages),
+- _Italic text_ (`<em>`, also usable, for the same reasons),
+- Underlined text
+- ~~Strikethrough text~~
+[Learn more](https://www.w3schools.in/html-tutorial/phrase-tags/)
 
 ---
 
@@ -175,10 +203,17 @@ Horizontal separation line
 ---
 
 ```html
-<ul>, <li>
+<ul>
+	<li>list item</li>
+	<li>...</li>
+</ul>
+
+<ol>
+	...
+</ol>
 ```
-Non-enumerated list
-List item
+UL tag is unordered list: items are preceded by a dot
+OL tag is ordered list, items are preceded by incrementing numbers
 
 ---
 
@@ -190,58 +225,63 @@ Creates a hyperlink to address given in href (can be a URL, or an id of another 
 ---
 
 ```html
-<div ...>
+<div class="" style="">
+	...
+</div>
 ```
-Defines a section in a document (is "block" level)
+Defines a section in a document, used for most hierarchical structure in the HTML file (is "block" level)
 
 ---
 
 ```html
-<span ...>
+<span class="" style="">
+	...
+</span>
 ```
 Defines a section in a document (is "inline" level), is often used as a container for styling a particular section of some text
 
 ---
 
 ```html
-<table>, <tr>, <th>, <td>
+<table>
+	<tr>
+		<th>1st column</th>
+		<th>2nd column</th>
+		<th>3rd column</th>
+	</tr>
+	<tr>
+		<td>data 1</td>
+		<td>data 2</td>
+		<td>data 3</td>
+	</tr>
+	<tr>
+		<td>25</td>
+		<td>50</td>
+		<td>75</td>
+	</tr>
+</table>
 ```
-Creates a table,
-Creates a table row,
-Creates a table header (element that looks more important than td),
-Creates table data.
+-`table` Creates a table,
+-`tr` Creates a table row,
+-`th` Creates a table header (element that looks more important than td),
+-`td` Creates table data.
+[Learn more](https://www.w3schools.com/html/html_tables.asp)
 
 ---
 
 ```html
-<code>, <kbd>, <samp>, <var>, <pre>
+<code>...</code>
+<pre>...</pre>
+<kbd>...</kbd>
+<samp>...</samp>
+<var>...</var>
 ```
-Write text in a font like raw code snippets on the web
-Write text in a font like keyboard keys, to represent user input
-Write text in a font like a terminal output
-Write text in a font like mathematical variables
-Used to align `<code>` text by accepting line returns in the plaintext between `<code>` and `</code>`
-
----
-
-```html
-<label id="">
-```
-A label
-
----
-
-```html
-<button type="" onClick="" />
-```
-A clickable button (has a default style which depends on the browser and the OS used - it can be styled manually with CSS)
-
----
-
-```html
-<form>
-```
-Builds/contains form elements.
+- Write text in a font like raw code snippets on the web
+- Used to align `<code>` text by accepting line returns in the plaintext between `<code>` and `</code>`
+- Write text in a font like keyboard keys, to represent user input
+- Write text in a font like a terminal output
+- Write text in a font like mathematical variables
+[Learn more](https://www.w3schools.in/html-tutorial/phrase-tags/)
 
 ---
 
@@ -261,19 +301,7 @@ NB: alt replaces the image with some text if necessary (used for hovertext or th
 
 ---
 
-```html
-<X class="MyClassName">
-```
-Using "class" as an attribute allows you to apply anything that applies to said class everywhere it is called.
-
----
-
-```html
-<X id="MyElemId">
-```
-Using "id" as an attribute allows you to apply anything to a specific element. Technically, it is functionally equivalent to using class, but for questions of style, class will apply to a group, while id should be reserved for specific elements. 
-
----
+### Interactive elements
 
 ```html
 <iframe src="URL" height="200" width="300" style="" name="">
@@ -283,40 +311,71 @@ Allows the embedding of another src, whether that be a webpage or a medium like 
 ---
 
 ```html
-<audio>
+<audio controls>
+	<source src="sound.ogg" type="audio/ogg">
+	<source src="sound.mp3" type="audio/mpeg">
+	Your browser does not support the audio HTML tag.
+</audio> 
 ```
-Allows embedding of audio such as ogg or mp3. Look here for precise syntax: https://www.w3schools.com/html/html5_audio.asp
+Allows embedding of audio such as ogg or mp3.
+[Learn more](https://www.w3schools.com/html/html5_audio.asp)
 
 ---
 
 ```html
-<video>
+<video width="640" height="480" controls>
+	<source src="movie.mp4" type="video/mp4">
+	<source src="movie.ogg" type="video/ogg">
+	Your browser does not support the video HTML tag.
+</video> 
 ```
-Allows embedding of video such as ogg or mp4. Look here for precuse syntax: https://www.w3schools.com/html/html5_video.asp
+Allows embedding of video such as ogg or mp4.
+[Learn more](https://www.w3schools.com/html/html5_video.asp)
 
 ---
 
 ```html
-<object>, <embed>
+<object data="sound.wav">
+	<param name="autoplay" value="true">
+</object> 
+<embed src="flash-program.swf"> 
 ```
-Allows the embedding of plug-ins, such as Java applets
+Allows the embedding of plug-ins (such as Java applets) or other external applications
+[Learn more about object](https://www.w3schools.com/Tags/tag_object.asp)
+[Learn more about embed](https://www.w3schools.com/Tags/tag_embed.asp)
 
 ---
 
 ```html
-<canvas>
+<canvas id="myCanvas"></canvas>
 ```
-A container for JavaScript graphics. See more at https://www.w3schools.com/graphics/canvas_intro.asp
-https://www.html5rocks.com/en/tutorials/canvas/performance/
+A container for JavaScript-based programmed graphics. 
+[Learn more - intro](https://www.w3schools.com/graphics/canvas_intro.asp)
+[Learn more - advanced](https://www.html5rocks.com/en/tutorials/canvas/performance/)
 
 ---
 
 ```html
-<svg>
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="#000000" stroke-width="5" fill="#888888" />
+</svg>
 ```
-A container for Scalable Vector Graphics. See more at https://www.w3schools.com/graphics/svg_intro.asp
+A container for Scalable Vector Graphics (in fact, SVG files merely contain HTML text detailing the vectorial shapes)
+[Learn more](https://www.w3schools.com/graphics/svg_intro.asp)
 
 ---
+
+### Usage of "class" and "id" attributes
+
+```html
+<tagname class="MyClassName">
+```
+Using "class" as an attribute allows you to apply anything that applies to said class everywhere it is called.
+
+```html
+<tagname id="MyElemId">
+```
+Using "id" as an attribute allows you to apply anything to a specific element. Technically, it is functionally equivalent to using class, but for questions of style, class will apply to a group, while id should be reserved for specific, unique elements.
 
 ---
 
@@ -335,10 +394,31 @@ https://www.w3schools.com/html/html_symbols.asp
 
 ### HTML Forms
 
-https://www.w3schools.com/html/html_forms.asp
-https://www.w3schools.com/html/html_form_elements.asp
-https://www.w3schools.com/html/html_form_input_types.asp
-https://www.w3schools.com/html/html_form_attributes.asp
+```html
+<form>
+```
+Builds/contains form elements.
+
+---
+
+```html
+<label id="">...</label>
+```
+A label
+
+---
+
+```html
+<button type="" onClick="" />
+```
+A clickable button (has a default style which depends on the browser and the OS used - it can be styled manually with CSS)
+
+---
+
+- https://www.w3schools.com/html/html_forms.asp
+- https://www.w3schools.com/html/html_form_elements.asp
+- https://www.w3schools.com/html/html_form_input_types.asp
+- https://www.w3schools.com/html/html_form_attributes.asp
 
 ---
 

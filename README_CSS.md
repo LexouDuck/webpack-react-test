@@ -15,7 +15,7 @@ The basic CSS syntax is like such:
 
 CSS can be added to HTML elements in 3 ways:
 - Inline - by using the style attribute in HTML elements
-- Internal - by using a <style> element in the <head> section
+- Internal - by using a `<style>` element in the `<head>` section
 - External - by using an external CSS file
 
 ##### Examples:
@@ -38,24 +38,65 @@ External:
 	<head><link rel="stylesheet" href="styles.css"></head> .... with stylesheet containing the appropriate CSS wished for the various element, in the syntax "h1 {color:blue; font-family:verdana;}"
 ```
 
+---
 
-To define a specific style for one special element, add an id attribute to the element:
+### CSS Unit types
 
-	<p id="p01">I am different</p>
-	
-then define a style for the element with the specific id:
+```css
+// absolute unit type
 
-	#p01
-	{
-		color: blue;
-	} 
+1cm 	centimeters
+1mm 	millimeters
+1in 	inches (1in = 96px = 2.54cm)
+1px 	pixels (1px = 1/96th of 1in)
+1pt 	points (1pt = 1/72 of 1in)
+1pc 	picas (1pc = 12 pt) 
+
+// relative unit types
+
+1% 	Relative to the parent HTML element's size
+1vw 	Relative to 1% of the width of the viewport* 	
+1vh 	Relative to 1% of the height of the viewport* 	
+1vmin 	Relative to 1% of viewport's smallest dimension 	
+1vmax 	Relative to 1% of viewport's largest dimension 	
+1em 	Relative to the font-size of the element (2em means 2 times the size of the current font) 	
+1rem 	Relative to font-size of the root element 	
+1ex 	Relative to the x-height of the current font (rarely used) 	
+1ch 	Relative to width of the "0" (zero) 	
+```
+[Learn more about unit types in CSS](https://www.w3schools.com/CSSref/css_units.asp)
+
+##### CSS calc() function
+
+The calc() function allows you to operate values with different unit types, like this:
+```css
+width: calc(100% - 50px);
+```
+
+[Learn more about calc](https://www.w3schools.com/cssref/func_calc.asp)
+
+---
 
 ### HTML Selectors:
 
 -	HTML Tag:
 ```css
-	html { /* style */ }
+html { /* style */ }
 ```
+
+To define a specific style for one special element, add an id attribute to the element:
+```html
+	<p id="p01">I am different</p>
+```
+then define a style for the element with the specific id:
+```html
+	#p01
+	{
+		color: blue;
+	} 
+```
+
+```css
 	.my_class (preceding point)
 	html_keyword (as is)
 	#an_id (preceding hash)
@@ -64,23 +105,22 @@ then define a style for the element with the specific id:
 	[attribute^="val"] (has attribute that starts with "val")
 	[attribute$="ue"] (has attribute that ends with "ue")
 	div.some-parent > .class-name { } (selects an element which is a child of another element)
+```
 
+---
 
+### Important CSS attributes
 
-
-
-5) Important CSS attributes
-
-color
-font-family
-font-size
-border
-border-style
-border-width
-padding
-margin
-background-color
-background-image
+`color: #FFFFFF;`
+`font-family: MyFont,monospace;`
+`font-size: 5rem;`
+`border: ;`
+`border-style: ;`
+`border-width: ;`
+`padding: ;`
+`margin: ;`
+`background-color: ;`
+`background-image: ;`
 
 
 
