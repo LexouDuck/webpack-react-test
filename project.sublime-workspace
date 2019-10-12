@@ -809,7 +809,7 @@
 	],
 	"find":
 	{
-		"height": 77.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
@@ -833,6 +833,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"[Learn",
 			" : ",
 			"FractalCanvasProps",
 			"MenuProps",
@@ -959,8 +960,7 @@
 			"render_pause(",
 			"render_pause_equip(",
 			"game_handlestate_pause(",
-			"game_handlestate_pause_equip(",
-			"game_changestate_pause_equip("
+			"game_handlestate_pause_equip("
 		],
 		"highlight": true,
 		"in_selection": false,

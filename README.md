@@ -56,21 +56,44 @@ NPM stands for Node Package Manager, it's the tool you use to add libraries, pac
 `yarn` is another package manager which people use, so if you see something like this:
 
 ```sh
-yarn add ...
+$ yarn add ...
 ```
 
 It's essentially the same as:
 
 ```sh
-npm install ...
+$ npm install ...
 ```
 
 When using Typescript, you also need to ensure the types for all the Javascript packages we're using (like React).
-So, you need to make sure that you have `@types/react` and `@types/react-dom` installed (https://definitelytyped.org/)
+So by default, you should have `@types/react` and `@types/react-dom` installed (https://definitelytyped.org/)
 
 For any other package, `npm` will usually warn you that you need to download the `@types/package` for your package.
 
 If the type declarations for your package of choice do not exist, then you can create a 'declaration' file to define the types yourself (learn more [here](https://basarat.gitbooks.io/typescript/docs/types/ambient/d.ts.html))
+
+Testing the project
+---
+
+Once everything is set up you just do:
+```sh
+$ npm start
+```
+And Node will start up a local server to test your application (by default on network port 3000), and so it will open a tab in your browser for the URL: `localhost:3000` in which you can try out your app/website locally.
+
+Depending on your OS, npm might start Node in the background. If this happens, then you need a way to stop the Node server.
+The simplest way to do this is to add a `stop` script: just add the following line in your `package.json`, under the `scripts` section:
+```json
+	...
+	"scripts":
+	{
+		"start": "react-scripts start",
+===>	"stop": "taskkill -F -IM node.exe",
+		"build": "react-scripts build",
+		...
+	}
+	...
+```
 
 ---
 
@@ -79,13 +102,13 @@ If the type declarations for your package of choice do not exist, then you can c
 Project Structure
 ---
 
-A typical React project is organized as follows:
+A typical React (with Node/npm) project is organized as follows:
 
 ```
-|- .gitignore			// The git ignore file states every file/folder that git shouldn't keep in the repository
+|- .gitignore			// The git ignore file states every file/folder that git shouldn't track for the remote repository
 |- package.json			// The package file is what Node/npm uses to determine which packages are needed for the project
-|- package-lock.json	// ???
-|- tsconfig.json		// The Typescript configuration file defines what options/flags to call the typescript->javascript compiler
+|- package-lock.json	// This file is like a "history" of all past dependency packages, to be able to backtrack through installations
+|- tsconfig.json		// The Typescript configuration file defines the options/flags used to call the typescript-to-javascript compiler
 |- README.md			// The readme file (markdown syntax, like this file you're reading) shows up on the project's main page
 |
 \___ node_modules		// The node_modules folder holds all the code for the packages you use, and their dependencies
@@ -119,6 +142,13 @@ A typical React project is organized as follows:
 
 
 ```
+- [Learn more about .gitignore syntax](https://git-scm.com/docs/gitignore)
+- [Learn more about manifest.json](https://developers.google.com/web/fundamentals/web-app-manifest/)
+- [Learn more about package.json](https://nodesource.com/blog/the-basics-of-package-json-in-node-js-and-npm/)
+- [Learn more about package-lock.json](https://docs.npmjs.com/files/package-lock.json)
+- [Learn more about tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
+- [Learn more about MarkDown syntax for README files](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+- [Learn more about Jest testing suites](https://jestjs.io/docs/en/tutorial-react)
 
 ---
 
@@ -138,6 +168,8 @@ import * from "react-dom";
 But, we are using typescript - this means we need to install the type definitions for each package we include.
 Here are some examples:
 
+### react-router
+
 React is a framework which has single-page applications in mind - if you wish to have a multiple-page website, you can use `react-router`:
 ```sh
 $ npm install react-router
@@ -154,8 +186,6 @@ $ npm install node-sass
 There are no type definitions for SCSS, as it is simply a preprocessor to compile SCSS files into CSS.
 
 https://medium.com/@lavrton/using-react-with-html5-canvas-871d07d8d753
-
-### 
 
 ---
 

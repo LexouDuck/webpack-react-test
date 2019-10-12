@@ -91,6 +91,7 @@ CSS information, whether it be inline, or a call to some external source, see [R
 <script type="text/..." src="..."></script>
 ```
 Include an external script, or write one within the tag (can be JavaScript, PHP) (can also be within `<body>`).
+	
 [Learn more](https://www.w3schools.com/Tags/tag_script.asp)
 
 ---
@@ -265,6 +266,7 @@ Defines a section in a document (is "inline" level), is often used as a containe
 -`tr` Creates a table row,
 -`th` Creates a table header (element that looks more important than td),
 -`td` Creates table data.
+
 [Learn more](https://www.w3schools.com/html/html_tables.asp)
 
 ---
@@ -281,6 +283,7 @@ Defines a section in a document (is "inline" level), is often used as a containe
 - Write text in a font like keyboard keys, to represent user input
 - Write text in a font like a terminal output
 - Write text in a font like mathematical variables
+
 [Learn more](https://www.w3schools.in/html-tutorial/phrase-tags/)
 
 ---
@@ -318,6 +321,7 @@ Allows the embedding of another src, whether that be a webpage or a medium like 
 </audio> 
 ```
 Allows embedding of audio such as ogg or mp3.
+
 [Learn more](https://www.w3schools.com/html/html5_audio.asp)
 
 ---
@@ -330,6 +334,7 @@ Allows embedding of audio such as ogg or mp3.
 </video> 
 ```
 Allows embedding of video such as ogg or mp4.
+
 [Learn more](https://www.w3schools.com/html/html5_video.asp)
 
 ---
@@ -341,7 +346,9 @@ Allows embedding of video such as ogg or mp4.
 <embed src="flash-program.swf"> 
 ```
 Allows the embedding of plug-ins (such as Java applets) or other external applications
+
 [Learn more about object](https://www.w3schools.com/Tags/tag_object.asp)
+
 [Learn more about embed](https://www.w3schools.com/Tags/tag_embed.asp)
 
 ---
@@ -350,7 +357,9 @@ Allows the embedding of plug-ins (such as Java applets) or other external applic
 <canvas id="myCanvas"></canvas>
 ```
 A container for JavaScript-based programmed graphics. 
+
 [Learn more - intro](https://www.w3schools.com/graphics/canvas_intro.asp)
+
 [Learn more - advanced](https://www.html5rocks.com/en/tutorials/canvas/performance/)
 
 ---
@@ -361,6 +370,7 @@ A container for JavaScript-based programmed graphics.
 </svg>
 ```
 A container for Scalable Vector Graphics (in fact, SVG files merely contain HTML text detailing the vectorial shapes)
+
 [Learn more](https://www.w3schools.com/graphics/svg_intro.asp)
 
 ---
@@ -387,8 +397,9 @@ In HTML one writes special sequences because of the syntactic role of some eleme
 - `&nbsp;` is a non-breaking space (a space which cannot be used to jump a line)
 - `&amp;` is an ampersand `&`
 - `&copy;` for a copyright symbol
-https://www.w3schools.com/html/html_entities.asp
-https://www.w3schools.com/html/html_symbols.asp
+
+- https://www.w3schools.com/html/html_entities.asp
+- https://www.w3schools.com/html/html_symbols.asp
 
 ---
 
