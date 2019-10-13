@@ -10,7 +10,7 @@ https://learnxinyminutes.com/docs/sass/
 
 The basic CSS syntax is like such:
 ```css
-	selector_str_name { property: value; property2: value2; ... }
+selector_str_name { property: value; property2: value2; ... }
 ```
 
 CSS can be added to HTML elements in 3 ways:
@@ -20,23 +20,44 @@ CSS can be added to HTML elements in 3 ways:
 
 ##### Examples:
 
-Inline:
+_Inline CSS_:
+
+To style one particular HTML element with CSS, do:
 
 ```html
-	<h1 style="color:blue;">This is a Blue Heading</h1> 
+<h1 style="color: blue;">This is a Blue Heading</h1> 
 ```
 
-Internal:
+This will modify the style of the element on which the style attribute is used.
+
+_Internal CSS_:
+
+To write CSS code within the HTML document, do:
 
 ```html
-	<head><style>h1 {color:blue;}</style></head> ... <h1>this is now blue</h1>
+<head>
+	<style>
+		h1 {color:blue;}
+	</style>
+</head>
+...
+<h1>this is now blue</h1>
 ```
 
-External:
+This will apply the given styles/selectors to the entire HTML page.
+
+_Inlcude External CSS_:
+
+To include an external ".css" file, do:
 
 ```html
-	<head><link rel="stylesheet" href="styles.css"></head> .... with stylesheet containing the appropriate CSS wished for the various element, in the syntax "h1 {color:blue; font-family:verdana;}"
+<head>
+	<link rel="stylesheet" href="styles.css">
+</head>
+...
 ```
+
+This will apply the style rules defined in `styles.css` to the entire HTML document.
 
 ---
 
@@ -45,10 +66,10 @@ External:
 ```css
 // absolute unit type
 
+1px 	pixels (1px = 1/96th of 1in)
 1cm 	centimeters
 1mm 	millimeters
 1in 	inches (1in = 96px = 2.54cm)
-1px 	pixels (1px = 1/96th of 1in)
 1pt 	points (1pt = 1/72 of 1in)
 1pc 	picas (1pc = 12 pt) 
 
@@ -64,7 +85,7 @@ External:
 1ex 	Relative to the x-height of the current font (rarely used) 	
 1ch 	Relative to width of the "0" (zero) 	
 ```
-[Learn more about unit types in CSS](https://www.w3schools.com/CSSref/css_units.asp)
+- [Learn more about unit types in CSS](https://www.w3schools.com/CSSref/css_units.asp)
 
 ##### CSS calc() function
 
@@ -72,39 +93,66 @@ The calc() function allows you to operate values with different unit types, like
 ```css
 width: calc(100% - 50px);
 ```
-
-[Learn more about calc](https://www.w3schools.com/cssref/func_calc.asp)
+- [Learn more about calc](https://www.w3schools.com/cssref/func_calc.asp)
 
 ---
 
 ### HTML Selectors:
 
--	HTML Tag:
+---
+
+##### HTML Tag
+
 ```css
 html { /* style */ }
 ```
 
+---
+
+##### HTML id attribute selector
+
 To define a specific style for one special element, add an id attribute to the element:
+
+To define a style for the element with the specific id:
+HTML:
 ```html
-	<p id="p01">I am different</p>
+<p id="myID">I am different</p>
 ```
-then define a style for the element with the specific id:
-```html
-	#p01
-	{
-		color: blue;
-	} 
+CSS:
+```css
+#myID // note the hashtag for the id selector
+{
+	color: blue;
+}
 ```
 
+---
+
+##### HTML class selector
+
+HTML:
+```html
+<p class="myClass">I am different</p>
+```
+CSS:
 ```css
-	.my_class (preceding point)
-	html_keyword (as is)
-	#an_id (preceding hash)
-	[has_attribute]
-	[attribute="value"] (has attribute equal to "value")
-	[attribute^="val"] (has attribute that starts with "val")
-	[attribute$="ue"] (has attribute that ends with "ue")
-	div.some-parent > .class-name { } (selects an element which is a child of another element)
+.myClass
+{
+	text-align: center;
+}
+```
+
+---
+
+##### Child selectors
+
+```css
+div.someParent > .someChild { /* code */ }
+```
+Selects an element which is a child of another element
+
+```css
+
 ```
 
 ---
@@ -122,10 +170,9 @@ then define a style for the element with the specific id:
 `background-color: ;`
 `background-image: ;`
 
+---
 
-
-
-3) Element level
+### Block-level, Inline-level elements
 
 Block level elements in HTML
 ```html
@@ -195,37 +242,6 @@ Inline elements in HTML
 <time>
 <tt>
 <var>
-```
-
----
-
-### Using The HTML "id" Attribute
-
-The id attribute specifies a unique id for an HTML element (the value must be unique within the HTML document).
-
-The id value can be used by CSS and JavaScript to perform certain tasks for the element with the specific id value.
-
-In CSS, to select an element with a specific id, write a hash (#) character, followed by the id of the element:
-Example
-
-Use CSS to style an element with the id "myHeader":
-
-```html
-<style>
-	#myHeader
-	{
-		background-color: lightblue;
-		color: black;
-		padding: 40px;
-		text-align: center;
-	}
-</style>
-```
-
-Then call the style
-
-```html
-<h1 id="myHeader">My Header</h1>
 ```
 
 ---

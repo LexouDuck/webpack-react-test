@@ -88,8 +88,8 @@ The simplest way to do this is to add a `stop` script: just add the following li
 	"scripts":
 	{
 		"start": "react-scripts start",
-===>	"stop": "taskkill -F -IM node.exe",
-		"build": "react-scripts build",
+=>		"stop": "taskkill -F -IM node.exe",
+		"build": "react-scripts build"
 		...
 	}
 	...
@@ -184,8 +184,6 @@ $ npm install node-sass
 ```
 
 There are no type definitions for SCSS, as it is simply a preprocessor to compile SCSS files into CSS.
-
-https://medium.com/@lavrton/using-react-with-html5-canvas-871d07d8d753
 
 ---
 

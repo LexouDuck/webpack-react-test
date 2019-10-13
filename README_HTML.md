@@ -121,7 +121,7 @@ Metadata tags, generally used to make responsive web pages (pages that dynamical
 <meta property="og:description" content="Website page description" />
 <meta http-equiv="refresh" content="30" /> <!-- refreshes web page automatically every 30 seconds -->
 ```
-[Learn more](https://www.w3schools.com/tags/tag_meta.asp)
+- [Learn more](https://www.w3schools.com/tags/tag_meta.asp)
 
 ---
 
@@ -129,7 +129,7 @@ Metadata tags, generally used to make responsive web pages (pages that dynamical
 <link rel="" href="" />
 ```
 Used to import things such as styles or scripts from permanent mirrors somewhere else on the internet.
-[Learn more](https://www.w3schools.com/Tags/tag_link.asp)
+- [Learn more](https://www.w3schools.com/Tags/tag_link.asp)
 
 ---
 
@@ -137,7 +137,7 @@ Used to import things such as styles or scripts from permanent mirrors somewhere
 <base href="http://www.base.url/" target="_blank" />
 ```
 Specifies the base URL and base target for all relative URLs in a page
-[Learn more](https://www.w3schools.com/Tags/tag_base.asp)
+- [Learn more](https://www.w3schools.com/Tags/tag_base.asp)
 
 ---
 
@@ -185,7 +185,7 @@ Paragraph of text
 - _Italic text_ (`<em>`, also usable, for the same reasons),
 - Underlined text
 - ~~Strikethrough text~~
-[Learn more](https://www.w3schools.in/html-tutorial/phrase-tags/)
+- [Learn more](https://www.w3schools.in/html-tutorial/phrase-tags/)
 
 ---
 
@@ -266,8 +266,7 @@ Defines a section in a document (is "inline" level), is often used as a containe
 -`tr` Creates a table row,
 -`th` Creates a table header (element that looks more important than td),
 -`td` Creates table data.
-
-[Learn more](https://www.w3schools.com/html/html_tables.asp)
+- [Learn more](https://www.w3schools.com/html/html_tables.asp)
 
 ---
 
@@ -278,20 +277,12 @@ Defines a section in a document (is "inline" level), is often used as a containe
 <samp>...</samp>
 <var>...</var>
 ```
-- Write text in a font like raw code snippets on the web
-- Used to align `<code>` text by accepting line returns in the plaintext between `<code>` and `</code>`
-- Write text in a font like keyboard keys, to represent user input
-- Write text in a font like a terminal output
-- Write text in a font like mathematical variables
-
-[Learn more](https://www.w3schools.in/html-tutorial/phrase-tags/)
-
----
-
-```html
-<input ...>, <textarea ...>, <select ...>
-```
-Used for fields in a form, syntax is specific and deserves more details.
+- `code` tag: display text in a monospace (syntax-colored) font like raw code snippets on the web
+- `pre` tag: Used to align `<code>` text by accepting line returns in the plaintext between `<code>` and `</code>`
+- `kbd` tag: Display text in a font like keyboard keys, to represent user input
+- `samp` tag: Display text in a font like a terminal output
+- `var` tag: Display text in a font like mathematical variables
+- [Learn more](https://www.w3schools.in/html-tutorial/phrase-tags/)
 
 ---
 
@@ -307,9 +298,10 @@ NB: alt replaces the image with some text if necessary (used for hovertext or th
 ### Interactive elements
 
 ```html
-<iframe src="URL" height="200" width="300" style="" name="">
+<iframe src="http://www.otherwebsite.com"></iframe>
 ```
-Allows the embedding of another src, whether that be a webpage or a medium like an image or a video (from an URL, such as a youtube.com/embed/VIDEO_ID).
+Allows the embedding of another HTML document within this HTML document, whether that be a webpage or an embedded applet like an image viewer or a video player (from an URL, such as a youtube.com/embed/VIDEO_ID).
+- [Learn more](https://www.w3schools.com/tags/tag_iframe.asp)
 
 ---
 
@@ -321,8 +313,7 @@ Allows the embedding of another src, whether that be a webpage or a medium like 
 </audio> 
 ```
 Allows embedding of audio such as ogg or mp3.
-
-[Learn more](https://www.w3schools.com/html/html5_audio.asp)
+- [Learn more](https://www.w3schools.com/html/html5_audio.asp)
 
 ---
 
@@ -334,8 +325,7 @@ Allows embedding of audio such as ogg or mp3.
 </video> 
 ```
 Allows embedding of video such as ogg or mp4.
-
-[Learn more](https://www.w3schools.com/html/html5_video.asp)
+- [Learn more](https://www.w3schools.com/html/html5_video.asp)
 
 ---
 
@@ -346,10 +336,8 @@ Allows embedding of video such as ogg or mp4.
 <embed src="flash-program.swf"> 
 ```
 Allows the embedding of plug-ins (such as Java applets) or other external applications
-
-[Learn more about object](https://www.w3schools.com/Tags/tag_object.asp)
-
-[Learn more about embed](https://www.w3schools.com/Tags/tag_embed.asp)
+- [Learn more about object](https://www.w3schools.com/Tags/tag_object.asp)
+- [Learn more about embed](https://www.w3schools.com/Tags/tag_embed.asp)
 
 ---
 
@@ -358,9 +346,9 @@ Allows the embedding of plug-ins (such as Java applets) or other external applic
 ```
 A container for JavaScript-based programmed graphics. 
 
-[Learn more - intro](https://www.w3schools.com/graphics/canvas_intro.asp)
-
-[Learn more - advanced](https://www.html5rocks.com/en/tutorials/canvas/performance/)
+- [Learn more - intro](https://www.w3schools.com/graphics/canvas_intro.asp)
+- [Learn more - advanced](https://www.html5rocks.com/en/tutorials/canvas/performance/)
+- [Learn more - React with HTML canvas](https://medium.com/@lavrton/using-react-with-html5-canvas-871d07d8d753)
 
 ---
 
@@ -370,8 +358,15 @@ A container for JavaScript-based programmed graphics.
 </svg>
 ```
 A container for Scalable Vector Graphics (in fact, SVG files merely contain HTML text detailing the vectorial shapes)
+- [Learn more](https://www.w3schools.com/graphics/svg_intro.asp)
 
-[Learn more](https://www.w3schools.com/graphics/svg_intro.asp)
+---
+
+```html
+<button type="button" onClick="">Click Me!</button>
+```
+A clickable button (has a default style which depends on the browser and the OS used - it can be styled manually with CSS)
+- [Learn more](https://www.w3schools.com/tags/tag_button.asp)
 
 ---
 
@@ -389,7 +384,7 @@ Using "id" as an attribute allows you to apply anything to a specific element. T
 
 ---
 
-### Character entities/ Escape sequences
+### Character entities / Escape sequences
 
 In HTML one writes special sequences because of the syntactic role of some elements.
 - `&lt;` for `<`
@@ -406,23 +401,71 @@ In HTML one writes special sequences because of the syntactic role of some eleme
 ### HTML Forms
 
 ```html
-<form>
+<form action="/action_page.php">
+	<label for="option1">1st option</label>
+	<input type="radio" id="option1" value="option1"><br>
+	<label for="option2">2nd option</label>
+	<input type="radio" id="option2" value="option2"><br>
+	<input type="submit" value="Submit">
+</form> 
 ```
-Builds/contains form elements.
+The HTML `form` tag builds/contains one or several form elements, and links a function to that set of inputs (can be Javascript, PHP, etc).
 
 ---
 
 ```html
-<label id="">...</label>
+<input type="submit" />			<!-- The button for submitting data to the HTML form handler -->
+<input type="reset" />			<!-- A reset button which returns all other other inputs in the form to their default values -->
+<input type="text" />			<!-- A one-line text input field -->
+<input type="password" />		<!-- A password (hidden text) input field -->
+<input type="button" />			<!-- A clickable button -->
+<input type="checkbox" />		<!-- A box that can be toggled on (checked) or off (unchecked) -->
+<input type="radio" />			<!-- A circular togglable button (meant to be one of many choices of several radio buttons) -->
+
+<!-- HTML5 only from here on: -->
+<input type="number" />			<!-- numeric input field -->
+<input type="search" />			<!-- A search text field (behaves pretty much like a regular text field) -->
+<input type="url" />			<!-- A URL text field (depending on browser validation of format may be automatic) -->
+<input type="color" />			<!-- A color picker tooltip -->
+<input type="date" />			<!-- A date input field -->
+<input type="datetime-local" />		<!-- A date and time input field, with no time zone -->
+<input type="month" />			<!-- An input field for month + year -->
+<input type="week" />			<!-- An input field for week + year -->
+<input type="time" />			<!-- An input field for a time of day -->
+<input type="email" />			<!-- A text input field for an email address -->
+<input type="file" />			<!-- A filesystem OS-dependent browsing menu for file uploading -->
+<input type="hidden" />			<!--  -->
+<input type="range" />			<!--  -->
+<input type="image" />			<!--  -->
+<input type="tel" />			<!-- A set of several text input fields for a several-part number -->
 ```
-A label
+A tag used to write HTML form input labels
+- [Learn more about the input tag](https://www.w3schools.com/tags/tag_input.asp)
+- [Learn more about different input field types](https://www.w3schools.com/html/html_form_input_types.asp)
 
 ---
 
 ```html
-<button type="" onClick="" />
+<select>
+	<option value="French">Français</option>
+	<option value="English">English</option>
+	<option value="Spanish">Español</option>
+</select>
 ```
-A clickable button (has a default style which depends on the browser and the OS used - it can be styled manually with CSS)
+The `<select>` element is used to create a drop-down list
+- [Learn more](https://www.w3schools.com/tags/tag_select.asp)
+
+```html
+<textarea maxlength="500">...</textarea>
+```
+The `<textarea>` tag defines a multi-line text input control
+- [Learn more](https://www.w3schools.com/tags/tag_textarea.asp)
+
+```html
+<label for="thing">thing</label>
+```
+A tag used to write HTML form input labels
+- [Learn more](https://www.w3schools.com/tags/tag_label.asp)
 
 ---
 
