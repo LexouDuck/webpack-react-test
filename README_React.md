@@ -422,6 +422,7 @@ doing Class['fieldName'] compiles to:
 https://templecoding.com/blog/2016/03/31/creating-typescript-typings-for-existing-react-components
 
 
+
 15) React Native
 
 	import React, {Component} from 'react';
@@ -429,7 +430,10 @@ https://templecoding.com/blog/2016/03/31/creating-typescript-typings-for-existin
 
     Instead of 'div' and 'span', you'll use native components like 'View' and 'Text'.
 
+https://github.com/Microsoft/TypeScript-React-Native-Starter
+https://medium.com/@jonnykalambay/your-first-hybrid-app-in-15-minutes-react-native-on-the-web-2cc2646051e
 
+yarn add react-scripts react-dom react-native-web react-art react-router-native react-router-dom
 
 
 
@@ -441,22 +445,18 @@ https://www.typescriptlang.org/docs/handbook/react-&-webpack.html
 
 To use TypeScript, you need to:
 
-    - Add TypeScript as a dependency to your project (npx tsc --init)
-    - Configure the TypeScript compiler options
-    - Use the right file extensions
-    - Add definitions for libraries you use
+- Add TypeScript as a dependency to your project (npx tsc --init)
+- Configure the TypeScript compiler options
+- Use the right file extensions
+- Add definitions for libraries you use
 
+Redux
+---
 
-
-
-
-17) React Native with React
-
-https://github.com/Microsoft/TypeScript-React-Native-Starter
-https://medium.com/@jonnykalambay/your-first-hybrid-app-in-15-minutes-react-native-on-the-web-2cc2646051e
-
-yarn add react-scripts react-dom react-native-web react-art react-router-native react-router-dom
-
+- Explanation: https://www.tutorialspoint.com/redux/redux_quick_guide.htm
+- Typescript: https://redux.js.org/recipes/usage-with-typescript
+- How to type redux with typescript: https://medium.com/knerd/typescript-tips-series-proper-typing-of-react-redux-connected-components-eda058b6727d
+- Formatting/project structure: https://github.com/erikras/ducks-modular-redux
 
 
 

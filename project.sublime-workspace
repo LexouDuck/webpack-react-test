@@ -529,6 +529,26 @@
 		"selected_items":
 		[
 			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"previe",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
 				"pack",
 				"Package Control: Remove Package"
 			],
@@ -569,14 +589,6 @@
 				"Package Control: Install Package"
 			],
 			[
-				"remov",
-				"Package Control: Remove Package"
-			],
-			[
-				"ins",
-				"Package Control: Install Package"
-			],
-			[
 				"htmlif",
 				"HTMLify: non-breaking spaces"
 			],
@@ -599,10 +611,6 @@
 			[
 				"prv",
 				"PackageResourceViewer: View Package Resource"
-			],
-			[
-				"remove",
-				"Package Control: Remove Package"
 			],
 			[
 				"scope",
@@ -678,6 +686,7 @@
 	},
 	"file_history":
 	[
+		"/D/Lexou/Documents/Work/Rodolphocentrisme/test/README_HTML.md",
 		"/D/Lexou/Documents/Work/Rodolphocentrisme/test/src/algebra.ts",
 		"/D/Lexou/Documents/Work/Rodolphocentrisme/test/src/color.tsx",
 		"/D/Lexou/Documents/Work/Rodolphocentrisme/test/src/canvas.tsx",
@@ -804,12 +813,11 @@
 		"/D/Lexou/Projects/Castlevania/C/src/init.c",
 		"/D/Lexou/Projects/Castlevania/C/src/assets_macos.h",
 		"/D/Lexou/Projects/Castlevania/C/src/config.c",
-		"/D/Lexou/Projects/Castlevania/C/src/config_ini.c",
-		"/D/Lexou/Projects/Castlevania/C/src/player/spells.h"
+		"/D/Lexou/Projects/Castlevania/C/src/config_ini.c"
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 60.0
 	},
 	"find_in_files":
 	{
@@ -833,6 +841,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"\n\n[Learn more",
 			"[Learn",
 			" : ",
 			"FractalCanvasProps",
@@ -959,8 +968,7 @@
 			"render_debug_rect(",
 			"render_pause(",
 			"render_pause_equip(",
-			"game_handlestate_pause(",
-			"game_handlestate_pause_equip("
+			"game_handlestate_pause("
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -968,6 +976,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"\n- [Learn more",
 			":",
 			"Props_FractalCanvas",
 			"Props_Menu",
@@ -1094,8 +1103,7 @@
 			"Input_SetDefaultBindings_Keyboard(",
 			"Input_SetDefaultBindings_Joystick(",
 			"Config_InitSettings(",
-			"Config_InitSettings",
-			"Render_Relic("
+			"Config_InitSettings"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -1153,7 +1161,7 @@
 	"pinned_build_system": "",
 	"replace":
 	{
-		"height": 70.0
+		"height": 112.0
 	},
 	"save_all_on_build": true,
 	"select_file":
