@@ -479,4 +479,4 @@ A tag used to write HTML form input labels
 ### HTML Layouts
 
 https://www.w3schools.com/html/html_layout.asp
-In a nutshell, the reason why Bootstrap and all these JS frameworks like Angular and React were invented. Making a layout in pure HTML is a bitch, and don't even hope to make it interactive.
+In a nutshell, the reason why Bootstrap, CSS and all these JS frameworks like Angular and React were invented. Making a layout in pure HTML is a terrible way to do things, and don't even hope to make it interactive.

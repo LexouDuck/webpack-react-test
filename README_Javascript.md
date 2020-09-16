@@ -27,7 +27,7 @@ NB: JavaScript has Automatic Semicolon Insertion, because fuck having the right 
 	
 	// vs.
 	
-	return // Semicolon automatically inserted here! Uh oh! //Seriously WTF Allman is the preferred programming style of like 60% of programmers, and for GOOD REASON (it's not like you're going to print your code on paper nowadays amirite), ECMA get your SHIT together xd
+	return // Semicolon automatically inserted here! Uh oh! //Seriously, Allman is the preferred programming style of like 60% of programmers, this is really contentious
 	{
 	    a: "A",
 	    b: "B"
