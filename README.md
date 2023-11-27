@@ -1,44 +1,207 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repo holds a small React-based fractal application which is a testing playground used to learn web dev with React/Typescript (and potentially GraphQL/Apollo)
 
-## Available Scripts
+# The README files
 
-In the project directory, you can run:
+General notes on web developement and things to know, regarding packages and whatnot for HTML, CSS, JavaScript, TypeScript, React, GraphQL, Apollo
 
-### `npm start`
+- [HTML Notes](https://github.com/LexouDuck/webpack-react-test/blob/master/README_HTML.md)
+- [CSS Notes](https://github.com/LexouDuck/webpack-react-test/blob/master/README_CSS.md)
+- [Javascript Notes](https://github.com/LexouDuck/webpack-react-test/blob/master/README_Javascript.md)
+- [Typescript Notes](https://github.com/LexouDuck/webpack-react-test/blob/master/README_Typescript.md)
+- [React Notes](https://github.com/LexouDuck/webpack-react-test/blob/master/README_React.md)
+- [GraphQL Notes](https://github.com/LexouDuck/webpack-react-test/blob/master/README_GraphQL.md)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Setting up React/Typescript/Node/Webpack
 
-### `npm run build`
+https://github.com/Microsoft/TypeScript-React-Starter#typescript-react-starter
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+https://webpack.js.org/
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Prerequisite: Node.js
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##### Mac:
 
-### `npm run eject`
+```sh
+$ brew install npm
+$ npm install
+$ npm install webpack -g
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+##### Windows:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Install Node.js from the official website: https://nodejs.org/en/
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Creating the project
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To setup a new React project with typescript:
+
+```sh
+$ npx create-react-app [folder_name] --typescript
+```
+
+You use `npx` when creating the project, and then you can use the `npm` command inside the resulting project folder.
+
+NPM stands for Node Package Manager, it's the tool you use to add libraries, packages, etc to your React app.
+
+`yarn` is another package manager which people use, so if you see something like this:
+
+```sh
+$ yarn add ...
+```
+
+It's essentially the same as:
+
+```sh
+$ npm install ...
+```
+
+When using Typescript, you also need to ensure the types for all the Javascript packages we're using (like React).
+So by default, you should have `@types/react` and `@types/react-dom` installed (https://definitelytyped.org/)
+
+For any other package, `npm` will usually warn you that you need to download the `@types/package` for your package.
+
+If the type declarations for your package of choice do not exist, then you can create a 'declaration' file to define the types yourself (learn more [here](https://basarat.gitbooks.io/typescript/docs/types/ambient/d.ts.html))
+
+Testing the project
+---
+
+Once everything is set up you just do:
+```sh
+$ npm start
+```
+And Node will start up a local server to test your application (by default on network port 3000), and so it will open a tab in your browser for the URL: `localhost:3000` in which you can try out your app/website locally.
+
+Depending on your OS, npm might start Node in the background. If this happens, then you need a way to stop the Node server.
+The simplest way to do this is to add a `stop` script: just add the following line in your `package.json`, under the `scripts` section:
+```json
+	...
+	"scripts":
+	{
+		"start": "react-scripts start",
+=>		"stop": "taskkill -F -IM node.exe",
+		"build": "react-scripts build"
+		...
+	}
+	...
+```
+
+---
+
+
+
+Project Structure
+---
+
+A typical React (with Node/npm) project is organized as follows:
+
+```
+|- .gitignore			// The git ignore file states every file/folder that git shouldn't track for the remote repository
+|- package.json			// The package file is what Node/npm uses to determine which packages are needed for the project
+|- package-lock.json	// This file is like a "history" of all past dependency packages, to be able to backtrack through installations
+|- tsconfig.json		// The Typescript configuration file defines the options/flags used to call the typescript-to-javascript compiler
+|- README.md			// The readme file (markdown syntax, like this file you're reading) shows up on the project's main page
+|
+\___ node_modules		// The node_modules folder holds all the code for the packages you use, and their dependencies
+|	|- subfolders		// one for each package
+|	|- ...
+|
+\___ public				// The public folder holds files that are to be served "as is", without any compilation/preprocessing or other.
+|	|- index.html		// The template HTML file: has a "<div id="root"></div> which is filled with React components
+|	|- manifest.json	// The manifest file stores data that is used to describe the React app (like smartphone icon, launch properties, etc)
+|	|- favico.ico		// The favicon is the icon your app uses as logo (.jpg/.png/.gif work, but .ico is better because it stores multiple sizes)
+|	|- ...				// Other assets, see here: https://create-react-app.dev/docs/using-the-public-folder
+|
+\___ src				// The src folder holds all the code, and common assets like fonts, images, svg files, etc...
+|	|- index.tsx		// The index file describes how to fill the template index.html file (by default, it puts "App" in the <div id="root">)
+|	|- App.tsx			// The main "App" component (this is the HTML that will fill the inside of "<div id='root'></div>" of index.html)
+|	|- App.test.tsx		// The testing suite for the "App" component (create-react-app installs jest by default, to test applications)
+|	|- App.scss			// The main SCSS file, holding all the SCSS code which is to be processed into CSS code
+|	|- serviceWorker.ts	// A file created by create-react-app which essentially allows the app to work offline
+|	|- ...				// Other code files
+|	|
+|	\___ assets			// A folder to hold common assets to used in the app
+|	|	|- logo.svg		// Images, SVGs, videos, etc
+|	|	|- ...
+|	|
+|	|
+|	\___ fonts			// A folder to hold fonts
+|	|	|- font.otf		// different formats of fonts, fallback fonts, etc
+|	|	|- font.ttf
+|	|	|- font.svg
+|	|	|- ...
+
+
+```
+- [Learn more about .gitignore syntax](https://git-scm.com/docs/gitignore)
+- [Learn more about manifest.json](https://developers.google.com/web/fundamentals/web-app-manifest/)
+- [Learn more about package.json](https://nodesource.com/blog/the-basics-of-package-json-in-node-js-and-npm/)
+- [Learn more about package-lock.json](https://docs.npmjs.com/files/package-lock.json)
+- [Learn more about tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
+- [Learn more about MarkDown syntax for README files](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+- [Learn more about Jest testing suites](https://jestjs.io/docs/en/tutorial-react)
+
+---
+
+
+
+Installing libraries
+---
+
+### React
+
+Since we used `npx create-react-app`, everything should already be covered for react, you simply need to include react in your code:
+```typescript
+import * from "react";
+import * from "react-dom";
+```
+
+But, we are using typescript - this means we need to install the type definitions for each package we include.
+Here are some examples:
+
+### react-router
+
+React is a framework which has single-page applications in mind - if you wish to have a multiple-page website, you can use `react-router`:
+```sh
+$ npm install react-router
+$ npm install @types/react-router
+```
+
+### SASS/SCSS
+
+To install the scss preprocessor package, do:
+```sh
+$ npm install node-sass
+```
+
+There are no type definitions for SCSS, as it is simply a preprocessor to compile SCSS files into CSS.
+
+---
+
+
+
+Other libraries which could be useful (who knows ?)
+---
+
+### Konva
+
+https://konvajs.org/api/Konva.html
+
+### AngularJS (who knows ?)
+
+https://learnxinyminutes.com/docs/angularjs/
+
+### ZDog
+
+https://zzz.dog/
+
+---
