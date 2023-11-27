@@ -267,50 +267,27 @@ function recursion_MarianiSilverSquare
 	if (size[0] <= 2 || size[1] <= 2)
 		return ;
 
-	let test_dwell : number;
+	let w_is_odd    = size[0] % 2 === 1;
+	let h_is_odd    = size[1] % 2 === 1;
+	let w_half_size = size[0] / 2;
+	let h_half_size = size[1] / 2;
 
-	let w_is_odd = size[0] % 2 === 1;
-	let h_is_odd = size[1] % 2 === 1;
+	let w_half        = w_is_odd ? Math.ceil(w_half_size) : (w_half_size);
+	let h_half        = h_is_odd ? Math.ceil(h_half_size) : (h_half_size);
+	let w_even_offset = w_is_odd ? 0 : 1;
+	let h_even_offset = h_is_odd ? 0 : 1;
+	let w_mid_anchor  = anchor[0] + Math.floor(w_half_size) - w_even_offset;
+	let h_mid_anchor  = anchor[1] + Math.floor(h_half_size) - h_even_offset;
 
-	let w_half = size[0] / 2;
-	let h_half = size[1] / 2;
-	let w_mid_anchor  : number;
-	let h_mid_anchor  : number;
-	let w_even_offset : number;
-	let h_even_offset : number;
+	let anchor_top_l : [number, number] = [ anchor[0]    , anchor[1]    ];
+	let anchor_top_r : [number, number] = [ w_mid_anchor , anchor[1]    ];
+	let anchor_bot_l : [number, number] = [ anchor[0]    , h_mid_anchor ];
+	let anchor_bot_r : [number, number] = [ w_mid_anchor , h_mid_anchor ];
 
-	if (w_is_odd)
-	{
-		w_even_offset = 0;
-		w_mid_anchor  = anchor[0] + Math.floor(w_half);
-		w_half        = Math.ceil(w_half);
-	}
-	else
-	{
-		w_even_offset = 1;
-		w_mid_anchor  = anchor[0] + Math.floor(w_half) - w_even_offset;
-	}
-	if (h_is_odd)
-	{
-		h_even_offset = 0;
-		h_mid_anchor  = anchor[1] + Math.floor(h_half);
-		h_half        = Math.ceil(h_half);
-	}
-	else
-	{
-		h_even_offset = 1;
-		h_mid_anchor  = anchor[1] + Math.floor(h_half) - h_even_offset;
-	}
-
-	let anchor_top_l : [number, number] = [anchor[0]	, anchor[1]		];
-	let anchor_top_r : [number, number] = [w_mid_anchor , anchor[1]		];
-	let anchor_bot_l : [number, number] = [anchor[0]	, h_mid_anchor	];
-	let anchor_bot_r : [number, number] = [w_mid_anchor , h_mid_anchor	];
-
-	let size_top_l : [number, number] = [w_half					, h_half				];
-	let size_top_r : [number, number] = [w_half + w_even_offset	, h_half				];
-	let size_bot_l : [number, number] = [w_half					, h_half + h_even_offset];
-	let size_bot_r : [number, number] = [w_half + w_even_offset	, h_half + h_even_offset];
+	let size_top_l : [number, number] = [ w_half                 , h_half                 ];
+	let size_top_r : [number, number] = [ w_half + w_even_offset , h_half                 ];
+	let size_bot_l : [number, number] = [ w_half                 , h_half + h_even_offset ];
+	let size_bot_r : [number, number] = [ w_half + w_even_offset , h_half + h_even_offset ];
 
 
 	function partialApply_FillDwell
@@ -360,7 +337,7 @@ function recursion_MarianiSilverSquare
 	)
 		: void
 	{
-		test_dwell = partialApply_FillDwell(q_anchor, q_size);
+		let test_dwell : number = partialApply_FillDwell(q_anchor, q_size);
 		if (test_dwell != -1)
 		{
 			let new_node = new MarianiSilver_Node(test_dwell, ms_depth, q_anchor, q_size);
